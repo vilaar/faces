@@ -113,6 +113,8 @@ const makeFaceCard = (face, index) => {
   card.dataset.type = type
   card.dataset.hasImage = imageURL ? "1" : "0"
   card.dataset.hasRef = resourceURL ? "1" : "0"
+  card.dataset.favorite = "0"
+  card.dataset.pinned = "0"
   card.dataset.index = String(index)
 
   const img = document.createElement("img")
@@ -125,7 +127,22 @@ const makeFaceCard = (face, index) => {
   nameEl.className = "name"
   nameEl.textContent = name
 
-  card.append(img, nameEl)
+  const heartBtn = document.createElement("button")
+  heartBtn.className = "favorite-btn"
+  heartBtn.setAttribute("aria-label", "Toggle favorite")
+  heartBtn.textContent = "♡"
+  heartBtn.addEventListener("click", (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    const isFav = card.dataset.favorite === "1"
+    card.dataset.favorite = isFav ? "0" : "1"
+    heartBtn.textContent = isFav ? "♡" : "♥"
+    heartBtn.classList.toggle("is-favorited", !isFav)
+    saveFavorites()
+    applyFilters()
+  })
+
+  card.append(img, nameEl, heartBtn)
   return card
 }
 
@@ -145,6 +162,67 @@ const filters = {
   nonWhite: false,
   noImage: false,
   noRef: false
+}
+
+// ---------- favorites persistence ----------
+const saveFavorites = () => {
+  const favNames = cards
+    .filter(c => c.dataset.favorite === "1")
+    .map(c => c.dataset.name)
+  localStorage.setItem("facesFavorites", JSON.stringify(favNames))
+}
+
+const loadFavorites = () => {
+  try {
+    const raw = localStorage.getItem("facesFavorites")
+    if (!raw) return
+    const favNames = new Set(JSON.parse(raw))
+    for (const card of cards) {
+      if (favNames.has(card.dataset.name)) {
+        card.dataset.favorite = "1"
+        const btn = card.querySelector(".favorite-btn")
+        if (btn) {
+          btn.textContent = "♥"
+          btn.classList.add("is-favorited")
+        }
+      }
+    }
+  } catch {
+    localStorage.removeItem("facesFavorites")
+  }
+}
+
+// ---------- filter persistence ----------
+const saveFilters = () => {
+  const serialized = {
+    age: Array.from(filters.age),
+    ethnicity: Array.from(filters.ethnicity),
+    hair: Array.from(filters.hair),
+    type: Array.from(filters.type),
+    category: Array.from(filters.category),
+    nonWhite: filters.nonWhite,
+    noImage: filters.noImage,
+    noRef: filters.noRef
+  }
+  localStorage.setItem("facesFilters", JSON.stringify(serialized))
+}
+
+const loadFilters = () => {
+  try {
+    const raw = localStorage.getItem("facesFilters")
+    if (!raw) return
+    const saved = JSON.parse(raw)
+    if (saved.age) saved.age.forEach(v => filters.age.add(v))
+    if (saved.ethnicity) saved.ethnicity.forEach(v => filters.ethnicity.add(v))
+    if (saved.hair) saved.hair.forEach(v => filters.hair.add(v))
+    if (saved.type) saved.type.forEach(v => filters.type.add(v))
+    if (saved.category) saved.category.forEach(v => filters.category.add(v))
+    filters.nonWhite = saved.nonWhite ?? false
+    filters.noImage = saved.noImage ?? false
+    filters.noRef = saved.noRef ?? false
+  } catch {
+    localStorage.removeItem("facesFilters")
+  }
 }
 
 // ---------- dev filter UI ----------
@@ -214,7 +292,14 @@ const updateCounts = () => {
 
   // Ethnicity counts (hide label if 0)
   for (const input of document.querySelectorAll("#filterEthnicity input[type='checkbox']")) {
-    if (input.id === "filterNonWhite") continue
+    if (input.id === "filterNonWhite") {
+      const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").some(b => b !== "white")).length
+      const label = input.closest("label")
+      const span = label?.querySelector("span")
+      if (span) span.textContent = `Non-White (${count})`
+      if (label) label.style.display = count === 0 && !input.checked ? "none" : ""
+      continue
+    }
     const val = input.value
     const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").includes(val)).length
     const label = input.closest("label")
@@ -222,23 +307,6 @@ const updateCounts = () => {
     if (span) span.textContent = `${val.replace(/\b\w/g, c => c.toUpperCase())} (${count})`
     if (label) label.style.display = count === 0 && !input.checked ? "none" : ""
   }
-  
-  for (const input of document.querySelectorAll("#filterEthnicity input[type='checkbox']")) {
-  if (input.id === "filterNonWhite") {
-    const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").some(b => b !== "white")).length
-    const label = input.closest("label")
-    const span = label?.querySelector("span")
-    if (span) span.textContent = `Non-White (${count})`
-    if (label) label.style.display = count === 0 && !input.checked ? "none" : ""
-    continue
-  }
-  const val = input.value
-  const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").includes(val)).length
-  const label = input.closest("label")
-  const span = label?.querySelector("span")
-  if (span) span.textContent = `${val.replace(/\b\w/g, c => c.toUpperCase())} (${count})`
-  if (label) label.style.display = count === 0 && !input.checked ? "none" : ""
-}
 
   // Hair counts (hide label if 0)
   for (const input of document.querySelectorAll("#filterHair input[type='checkbox']")) {
@@ -258,14 +326,26 @@ const applyFilters = () => {
   let visibleCount = 0
 
   for (const card of cards) {
-    const okType =
-      filters.type.size === 0 ||
-      card.dataset.type === "both" ||
-      filters.type.has(card.dataset.type)
+    const isFavorite = card.dataset.favorite === "1"
 
     const okCategory =
       filters.category.size === 0 ||
       filters.category.has(card.dataset.category)
+
+    // Favorites only respect the category toggle
+    if (isFavorite && okCategory) {
+      card.classList.remove("is-hidden")
+      card.dataset.pinned = "1"
+      visibleCount++
+      continue
+    }
+
+    card.dataset.pinned = "0"
+
+    const okType =
+      filters.type.size === 0 ||
+      card.dataset.type === "both" ||
+      filters.type.has(card.dataset.type)
 
     const okAge =
       filters.age.size === 0 ||
@@ -298,7 +378,17 @@ const applyFilters = () => {
     noResultsEl.style.display = visibleCount === 0 ? "block" : "none"
   }
 
+  // Re-order DOM: favorites (sorted alpha) first, then the rest
+  const pinned = cards
+    .filter(c => c.dataset.pinned === "1")
+    .sort((a, b) => a.dataset.name.localeCompare(b.dataset.name, undefined, { sensitivity: "base" }))
+
+  const unpinned = cards.filter(c => c.dataset.pinned !== "1")
+
+  facesContainer.append(...pinned, ...unpinned)
+
   updateCounts()
+  saveFilters()
 }
 
 // ---------- filter UI builders ----------
@@ -364,14 +454,17 @@ const buildTypeFilter = () => {
   }
 }
 
-// Age filter
+// Age filter — only shows buckets that exist for the active category
 const buildAgeFilter = () => {
   const mount = document.getElementById("filterAge")
   if (!mount) throw new Error("Missing #filterAge in DOM")
   mount.innerHTML = ""
 
+  const activeCategory = categoryToggle.checked ? CATEGORY_RIGHT : CATEGORY_LEFT
+
   const buckets = uniq(
     safeFaces
+      .filter(f => normalize(f?.category).toLowerCase() === activeCategory)
       .map(f => Number(f?.age))
       .filter(Number.isFinite)
   ).sort((a, b) => a - b)
@@ -433,7 +526,6 @@ const buildEthnicityFilter = () => {
     mount.appendChild(label)
   }
 
-  // Non-white filter — always show if white exists in the data
   if (occupiedBuckets.has("white")) {
     const label = document.createElement("label")
     label.className = "filter-option"
@@ -496,6 +588,24 @@ const buildAllFilters = () => {
   buildHairFilter()
 }
 
+// ---------- sync checkboxes to restored filter state ----------
+const syncCheckboxesToFilters = () => {
+  categoryToggle.checked = filters.category.has(CATEGORY_RIGHT)
+
+  document.querySelectorAll(".faces-sidebar input[type='checkbox']").forEach(cb => {
+    if (cb.id === "categoryToggle") return
+    if (cb.id === "filterNonWhite") { cb.checked = filters.nonWhite; return }
+    if (cb.id === "devFilterNoImage") { cb.checked = filters.noImage; return }
+    if (cb.id === "devFilterNoRef") { cb.checked = filters.noRef; return }
+
+    const groupId = cb.closest("[id]")?.id ?? ""
+    const key = groupId.replace("filter", "").toLowerCase()
+    if (filters[key] instanceof Set) {
+      cb.checked = filters[key].has(cb.value)
+    }
+  })
+}
+
 // ---------- Category toggle: Masc <-> Femme ----------
 const categoryToggle = document.getElementById("categoryToggle")
 if (!categoryToggle) throw new Error("Missing #categoryToggle in DOM")
@@ -506,6 +616,8 @@ const CATEGORY_RIGHT = "femme"
 categoryToggle.addEventListener("change", () => {
   filters.category.clear()
   filters.category.add(categoryToggle.checked ? CATEGORY_RIGHT : CATEGORY_LEFT)
+  filters.age.clear()
+  buildAgeFilter()
   applyFilters()
 })
 
@@ -571,9 +683,8 @@ document.getElementById("clearFiltersBtn").addEventListener("click", () => {
   if (devNoImage) devNoImage.checked = false
   if (devNoRef) devNoRef.checked = false
 
-  categoryToggle.checked = true
   filters.category.clear()
-  filters.category.add(CATEGORY_RIGHT)
+  filters.category.add(categoryToggle.checked ? CATEGORY_RIGHT : CATEGORY_LEFT)
 
   document
     .querySelectorAll(".faces-sidebar input[type='checkbox']")
@@ -582,6 +693,7 @@ document.getElementById("clearFiltersBtn").addEventListener("click", () => {
       cb.checked = false
     })
 
+  localStorage.removeItem("facesFilters")
   applyFilters()
 })
 
@@ -590,11 +702,14 @@ document.getElementById("sortNameBtn")?.addEventListener("click", sortByName)
 document.getElementById("resetOrderBtn")?.addEventListener("click", resetOrder)
 
 // ---------- DEFAULTS ON LOAD ----------
-categoryToggle.checked = true
-filters.category.clear()
-filters.category.add(CATEGORY_RIGHT)
-
-filters.type.clear()
-
+loadFilters()
 buildAllFilters()
+loadFavorites()
+syncCheckboxesToFilters()
+
+if (!filters.category.size) {
+  categoryToggle.checked = true
+  filters.category.add(CATEGORY_RIGHT)
+}
+
 applyFilters()
