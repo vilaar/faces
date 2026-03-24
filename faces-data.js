@@ -3238,7 +3238,7 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "https://static.wikia.nocookie.net/walkertexasranger/images/e/ec/Odette.jpg/revision/latest?cb=20201222013457",
+    "imageURL": "https://deadline.com/wp-content/uploads/2025/07/IMG_7158.png?crop=0px%2C0px%2C1173px%2C658px&resize=681%2C383",
     "resourceURL": "https://www.instagram.com/odetteannable/"
   },
   {
@@ -3728,7 +3728,7 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "https://us-east1-aws.api.snapchat.com/web-capture/www.snapchat.com/add/sophieeemudd/preview/square.jpeg?xp_id=1",
+    "imageURL": "https://thenetline.com/wp-content/uploads/2018/11/Sophie-Mudd-.jpg",
     "resourceURL": "https://www.instagram.com/sophiemudd/"
   },
   {
