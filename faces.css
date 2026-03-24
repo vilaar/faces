@@ -228,3 +228,65 @@ html {
   height: 60px;            /* fixed compact height */
   padding: 0 10px;
 }
+
+/* ---------- Favorite button overlay ---------- */
+.face-card {
+  position: relative;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.15s, background 0.15s;
+  z-index: 2;
+}
+
+.favorite-btn:hover {
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+}
+
+.favorite-btn.is-favorited {
+  color: #c9a84c;
+  text-shadow: 0 0 6px rgba(201, 168, 76, 0.6);
+}
+
+/* ---------- Favorites sidebar section ---------- */
+.filter-group-favorites {
+  border: 1px solid #c9a84c;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  background: black;
+}
+
+.filter-label-favorites {
+  font-weight: bold;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 6px;
+}
+
+.favorites-only-label span {
+  color: #c9a84c;
+}
+
+#favoritesCount {
+  font-weight: normal;
+  color: inherit;
+}
