@@ -1,0 +1,48 @@
+<div id="facesRoot" class="faces-root">
+  <aside class="faces-sidebar" aria-label="Filters">
+    <div class="faces-sidebar-inner">
+      <div id="filterDev"></div>
+      <div class="filter-group">
+        <div class="filter-label">Restrict Type</div>
+        <div class="filter-options" id="filterType"></div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">Category</div>
+        <label class="switch switch-category" for="categoryToggle">
+          <span class="switch-text">Masc</span>
+          <input type="checkbox" id="categoryToggle" checked>
+          <span class="switch-track" aria-hidden="true"></span>
+          <span class="switch-text">Femme</span>
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">Age</div>
+        <div class="filter-options" id="filterAge"></div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">Ethnicity</div>
+        <div class="filter-options" id="filterEthnicity"></div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">Hair</div>
+        <div class="filter-options" id="filterHair"></div>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" id="clearFiltersBtn">Clear</button>
+
+      <button type="button" id="toggleImagesBtn">Hide Images</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="faces-main">
+  <div id="facesContainer" class="face-card-container">
+    <div id="noResults" class="no-results">No results</div>
+  </div>
+</div>
+</div>
