@@ -1,0 +1,230 @@
+html {
+  background: black;
+}
+
+.faces-root {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.faces-sidebar {
+  position: sticky;
+  top: 0px;
+  margin-top: -16px;
+  height: 100vh;
+  overflow: auto;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  padding-right: 12px;
+  background: lightgray;
+}
+
+.faces-sidebar-inner {
+  padding: 8px 4px;
+}
+
+.filter-group {
+  margin-bottom: 14px;
+}
+
+.filter-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.filter-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.filter-actions button {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+/* Cards */
+.faces-main {
+  min-width: 0;
+}
+
+.face-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 24px;
+  justify-content: center;
+  padding: 0 20px; /* prevents hard edge clipping */
+}
+
+.face-card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+}
+
+.face-card[data-category="femme"] {
+  background: #ffe4f1;   /* soft pink */
+}
+
+.face-card[data-category="masc"] {
+  background: #e3f0ff;   /* soft blue */
+}
+
+.face-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-radius: 8px 8px 0px 0px;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    border-bottom: none;
+}
+
+.face-card .name {
+    border: 1px solid lightgray;
+    padding-top: 4px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: 0px 0px 8px 8px;
+    padding-bottom: 4px;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+/* Filtered-out cards */
+.face-card.is-hidden {
+  display: none !important;
+}
+
+/* Category switch: Masc (left, blue) <-> Femme (right, pink) */
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch-text {
+  font-size: 14px;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.switch-track {
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+.switch-track::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.25s ease;
+}
+
+/* Left (Masc) = blue */
+.switch-category .switch-track {
+  background: #007bff;
+}
+
+/* Right (Femme) = pink */
+.switch-category input:checked + .switch-track {
+  background: #e83e8c;
+}
+
+.switch-category input:checked + .switch-track::before {
+  transform: translateX(20px);
+}
+
+.switch input:focus-visible + .switch-track {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+}
+
+.no-results {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.face-card:hover {
+  transform: scale(1.1);
+}
+
+.face-card img {
+  transition: transform 0.2s ease;
+}
+
+.faces-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.faces-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.hide-images .face-card img {
+  display: none;
+}
+
+.hide-images .face-card {
+  height: auto;
+}
+
+.hide-images .face-card .name {
+  margin: 0;
+  text-align: center;
+  border: none;
+}
+
+.hide-images .face-card {
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+  height: 60px;            /* fixed compact height */
+  padding: 0 10px;
+}
