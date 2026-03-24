@@ -1027,8 +1027,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://www.instafitbio.com/wp-content/uploads/2019/12/Daria-Shy-InstaFitBio.jpg",
+    "resourceURL": "https://www.instagram.com/dariashy_model/"
   },
   {
     "name": "David Duchovny",
@@ -1087,8 +1087,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://static.tvtropes.org/pmwiki/pub/images/dawn_olivieri.jpg",
+    "resourceURL": "https://www.instagram.com/dawnolivieri/"
   },
   {
     "name": "Dayana Crunk",
@@ -1114,11 +1114,11 @@ const faces = [
     "name": "Deborah Ann Woll",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "red",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://www.dailyactor.com/wp-content/uploads/2012/09/deborah-ann-wall.jpg",
+    "resourceURL": "https://www.instagram.com/deborahannwoll/"
   },
   {
     "name": "Delaia Gonzalez",
@@ -1194,11 +1194,11 @@ const faces = [
     "name": "Diora Baird",
     "age": 5,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "blonde brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://www.slashfilm.com/img/gallery/diora-baird-auditions-for-thor/intro-import.jpg",
+    "resourceURL": "https://www.instagram.com/diorabaird/"
   },
   {
     "name": "Disha Patani",
@@ -1207,8 +1207,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "both",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://mn2s.com/wp-content/uploads/2025/02/Disha-Patani.png",
+    "resourceURL": "https://www.instagram.com/dishapatani/"
   },
   {
     "name": "DJ Cotrona",
@@ -1234,21 +1234,21 @@ const faces = [
     "name": "Donna Feldman",
     "age": 5,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "dark brown/black",
     "category": "femme",
     "type": "both",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://alchetron.com/cdn/donna-feldman-ca0ba855-e43f-4f94-81e0-b8e31e5464f-resize-750.jpeg",
+    "resourceURL": "https://www.instagram.com/donnafeldman/"
   },
   {
     "name": "Draya Michele",
     "age": 5,
     "ethnicity": "black",
-    "hair": "brown",
+    "hair": "dark brown/black",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://www.nickiswift.com/img/gallery/everything-we-know-about-draya-micheles-new-reality-tv-series/l-intro-1604937170.jpg",
+    "resourceURL": "https://www.instagram.com/drayamichele/"
   },
   {
     "name": "Dua Lipa",
@@ -1324,11 +1324,11 @@ const faces = [
     "name": "Eliza Rose Watson",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "dirty blonde/light brown",
     "category": "femme",
     "type": "both",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://www.thesun.co.uk/wp-content/uploads/2021/08/NINTCHDBPICT000672796358-1.jpg?strip=all&w=720",
+    "resourceURL": "https://www.instagram.com/elizarosewatson/"
   },
   {
     "name": "Elizabeth Elam",
@@ -1367,8 +1367,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://s.wsj.net/public/resources/images/BN-BI095_mag031_G_20140131160207.jpg",
+    "resourceURL": "https://www.instagram.com/emilia_clarke/"
   },
   {
     "name": "Emilie Payet",
@@ -1427,8 +1427,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://www.hollywoodreporter.com/wp-content/uploads/2019/04/emmy_rossum_.jpg?w=1296&h=730&crop=1",
+    "resourceURL": "https://www.hollywoodreporter.com/wp-content/uploads/2019/04/emmy_rossum_.jpg?w=1296&h=730&crop=1"
   },
   {
     "name": "Eoin Macken",
@@ -1457,8 +1457,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://s3.r29static.com/bin/entry/fdd/x,80/1237522/rexusa-1806932bd.jpg",
+    "resourceURL": "https://www.listal.com/eva-amurri/pictures/top-voted"
   },
   {
     "name": "Eva Green",
@@ -1507,8 +1507,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://variety.com/wp-content/uploads/2023/05/Freida-Pinto-e1683038350530.jpeg?w=720&h=531&crop=1",
+    "resourceURL": "https://www.instagram.com/freidapinto/"
   },
   {
     "name": "Froy Gutierrez",
@@ -1527,8 +1527,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/02/Gemma-Chan.jpg?imageMogr2/format/jpg",
+    "resourceURL": "https://www.instagram.com/gemmachan/"
   },
   {
     "name": "Genesis Rodriguez",
@@ -1577,8 +1577,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://i0.wp.com/www.thewrap.com/wp-content/uploads/2018/09/Grace-Park-Hawaii-Five-0.jpg?fit=618%2C412&quality=89&ssl=1",
+    "resourceURL": "https://www.listal.com/grace-park/pictures"
   },
   {
     "name": "Gracie Dzienny",
@@ -1677,8 +1677,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://assets.mycast.io/actor_images/actor-hassie-harrison-303060_large.jpg?1637014911",
+    "resourceURL": "https://www.instagram.com/hassieharrison/"
   },
   {
     "name": "Henry Cavill",
@@ -1817,18 +1817,18 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://s.yimg.com/ny/api/res/1.2/8AKeRxmi2yirN5NdbN9Ouw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTI0MDA7aD0xMjI0O2NmPXdlYnA-/https://media.zenfs.com/en/soaphub_816/d3a6fe429e3a669339a4cb007bb2ecd1",
+    "resourceURL": "https://www.listal.com/jacqueline-macinnes-wood/pictures/top-voted"
   },
   {
     "name": "Jade Cargill",
     "age": 4,
     "ethnicity": "black",
-    "hair": "brown",
+    "hair": "gray/white",
     "category": "femme",
     "type": "both",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://m.media-amazon.com/images/M/MV5BYzk1ZGRmZDktNDc0Mi00Y2YyLTlhMDgtNWNhYWY4Y2MwMDlkXkEyXkFqcGc@._V1_.jpg",
+    "resourceURL": "https://www.instagram.com/jadecargill/"
   },
   {
     "name": "Jade Tailor",
@@ -1837,8 +1837,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://starrymag.com/wp-content/uploads/2018/01/JadeTailor.jpg",
+    "resourceURL": "https://www.instagram.com/jade.tailor/"
   },
   {
     "name": "Jai Courtney",
@@ -1857,8 +1857,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://image.tmdb.org/t/p/w500/2lo29bgiQS6hWcLI81XkRAorKoy.jpg",
+    "resourceURL": "https://www.instagram.com/jaimiealexander/"
   },
   {
     "name": "Jake Gyllenhaal",
@@ -1887,8 +1887,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://assets.mycast.io/actor_images/actor-jamie-chung-31640_large.jpg?1579969651",
+    "resourceURL": "https://www.instagram.com/jamiejchung/"
   },
   {
     "name": "Jan Luis Castellanos",
@@ -1907,18 +1907,18 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://nappyafro.com/wp-content/uploads/2019/10/janaayy-nappyafro-01-951x1024.jpg",
+    "resourceURL": "https://www.instagram.com/janaayy/"
   },
   {
     "name": "Janet Montgomery",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "brown black",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://pics.filmaffinity.com/142676518102360-nm_200.jpg",
+    "resourceURL": "https://www.instagram.com/janeymontgomery/"
   },
   {
     "name": "Jared Padalecki",
@@ -1937,8 +1937,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://images.ctfassets.net/g8qtv9gzg47d/image_post_56335/a150b4fc1b4d616409f12af0ec9c1b23/Slider_2_-_Jasmine_Tookes?fl=progressive&fm=jpg&q=80",
+    "resourceURL": "https://www.instagram.com/jastookes/"
   },
   {
     "name": "Jason Momoa",
@@ -2007,8 +2007,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://media.cnn.com/api/v1/images/stellar/prod/210909101836-01-jennifer-lawrence-file-2019.jpg?q=x_117,y_6,h_1564,w_2779,c_crop/h_833,w_1480",
+    "resourceURL": "https://www.listal.com/jennifer-lawrence_iii/pictures/top-voted"
   },
   {
     "name": "Jenny O'Sullivan",
@@ -2087,8 +2087,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://media0098.elcinema.com/uploads/_315x420_da7e76d32df61ea3336f209aebccad0ed9e08c30f0716adbbad9945c98fe5594.jpg",
+    "resourceURL": "https://www.instagram.com/iamjessicalucas/"
   },
   {
     "name": "Jessica Parker Kennedy",
@@ -2147,8 +2147,8 @@ const faces = [
     "hair": "brown",
     "category": "masc",
     "type": "not",
-    "imageURL": "https://pbs.twimg.com/profile_images/1405725120681885700/-0GzVzLB_400x400.jpg",
-    "resourceURL": ""
+    "imageURL": "https://ntvb.tmsimg.com/assets/assets/311060_v9_bd.jpg?w=360&h=480",
+    "resourceURL": "https://www.instagram.com/jonnybernthal/"
   },
   {
     "name": "Jon Hamm",
@@ -2177,8 +2177,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://image.tmdb.org/t/p/w500/gzEPRAuCAz8Aw5LvC5K0sgrNNi7.jpg",
+    "resourceURL": "https://www.instagram.com/jordanclairerobbins/"
   },
   {
     "name": "Josh Mario John",
@@ -2244,11 +2244,11 @@ const faces = [
     "name": "K.D. Aubert",
     "age": 4,
     "ethnicity": "black",
-    "hair": "brown",
+    "hair": "dark brown/black",
     "category": "femme",
     "type": "both",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://mn2s.com/wp-content/uploads/2021/06/KD-Aubert.png",
+    "resourceURL": "https://www.instagram.com/therealkdaubert/"
   },
   {
     "name": "Kaitlyn Siragusa (Amouranth)",
@@ -2337,8 +2337,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://images.squarespace-cdn.com/content/v1/58b872802e69cf2f5499ec09/1492186611254-I8BYQ68DHWC0NMNCS56B/katharine+mcphee.jpg",
+    "resourceURL": "https://www.instagram.com/katharinefoster/"
   },
   {
     "name": "Katheryn Winnick",
@@ -2347,8 +2347,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://resizing.flixster.com/B0antLu_m8SYEYuksV0uiu1_sxM=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/312027_v9_bc.jpg",
+    "resourceURL": "https://www.instagram.com/katherynwinnick/"
   },
   {
     "name": "Katie Cassidy",
@@ -2357,8 +2357,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://deadline.com/wp-content/uploads/2021/03/Katie-Cassidy.jpg?w=1000",
+    "resourceURL": "https://www.instagram.com/katiecassidy/"
   },
   {
     "name": "Katie Douglas",
@@ -2377,8 +2377,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://i.pinimg.com/736x/01/86/67/018667009ff15faa7e58205c97aca6dd.jpg",
+    "resourceURL": "https://www.listal.com/katie-mcgrath/pictures/top-voted"
   },
   {
     "name": "Katya Kotaro",
@@ -2417,8 +2417,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://idata.over-blog.com/3/99/16/26/LE-MU-DES-PEOPLE/KEIRA-KNIGHTLEY/600full-keira-knightley.jpg",
+    "resourceURL": "https://www.listal.com/keira-knightley/pictures/top-voted"
   },
   {
     "name": "Kelly Gale",
@@ -2427,8 +2427,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://booker-ford.s3.amazonaws.com/library/3406/B08ZybjdGuaeT1XAFiWw_M.JPG",
+    "resourceURL": "https://www.instagram.com/kellygale/"
   },
   {
     "name": "Kelsey Merritt",
@@ -2538,8 +2538,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://i.pinimg.com/736x/09/20/73/092073a1931f1947bae82fbdc42944fd.jpg",
+    "resourceURL": "https://www.listal.com/lauren-cohan/pictures/top-voted"
   },
   {
     "name": "Lauren Mellor",
@@ -2548,8 +2548,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://superstarsbio.com/wp-content/uploads/2022/01/Lauren-Mellor-age.jpg",
+    "resourceURL": "https://www.instagram.com/lauren_mellor/"
   },
   {
     "name": "Lauren Wood",
@@ -2568,8 +2568,8 @@ const faces = [
     "hair": "bald",
     "category": "masc",
     "type": "not",
-    "imageURL": "https://badini.shafilm.vip/public/upload/actor/lee-arenberg.webp",
-    "resourceURL": ""
+    "imageURL": "https://preview.redd.it/shoutout-to-lee-arenberg-who-stars-in-two-movies-covered-v0-jxknovnybgjd1.jpg?width=640&crop=smart&auto=webp&s=163462de5d4207abcc8a5ee04295c044ab5e7391",
+    "resourceURL": "https://www.listal.com/lee-arenberg/pictures"
   },
   {
     "name": "Lenny Kravitz",
@@ -2598,8 +2598,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPT1WUHe-6CJajdRofsNfZmcyH_XcAtY3rg&s",
+    "resourceURL": "https://www.instagram.com/_misslexiii/"
   },
   {
     "name": "Lili Reinhart",
@@ -2620,16 +2620,6 @@ const faces = [
     "type": "not",
     "imageURL": "https://tvovermind.com/wp-content/uploads/2017/08/Lili-Simmons.jpg",
     "resourceURL": "https://www.instagram.com/liliflower33/"
-  },
-  {
-    "name": "Linda Vojtova",
-    "age": 4,
-    "ethnicity": "white",
-    "hair": "brown",
-    "category": "femme",
-    "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
   },
   {
     "name": "Lindsay Ellingson",
@@ -2668,18 +2658,18 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "both",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://archive.siasat.com/wp-content/uploads/2018/06/Lisa-Haydon.jpg",
+    "resourceURL": "https://www.instagram.com/lisahaydon/"
   },
   {
-    "name": "Lizzy Kaplan",
+    "name": "Lizzy Caplan",
     "age": 5,
     "ethnicity": "white",
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://i.pinimg.com/474x/30/f7/21/30f721c58e6af8006f8d566446e262be.jpg",
+    "resourceURL": "https://www.listal.com/lizzy-caplan/pictures"
   },
   {
     "name": "Louise Cliffe",
@@ -2688,8 +2678,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "http://img.skysports.com/09/01/218x298/soccerettewk212800_1719564.jpg",
+    "resourceURL": "https://www.instagram.com/louisecliffereal/"
   },
   {
     "name": "Lucien Laviscount",
@@ -2708,8 +2698,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://rare-gallery.com/thumbs/1221026-lucy-pinder.jpg",
+    "resourceURL": "https://www.instagram.com/lucy_pinder83/"
   },
   {
     "name": "Ludi Lin",
@@ -2738,8 +2728,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://i.pinimg.com/236x/c4/b6/b1/c4b6b1a215897d70775e5dbc7802ed2e.jpg",
+    "resourceURL": "https://www.instagram.com/officialmadalinaghenea/"
   },
   {
     "name": "Maddy Crum",
@@ -2845,11 +2835,11 @@ const faces = [
     "name": "Margot Robbie",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "blonde",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://cdn1.faroutmagazine.co.uk/uploads/1/2024/03/Margot-Robbie-2023-Actor-Far-Out-Magazine-1140x855.jpg",
+    "resourceURL": "https://www.instagram.com/margotrobbieofficial/"
   },
   {
     "name": "Marie Avgeropoulos",
@@ -2955,11 +2945,11 @@ const faces = [
     "name": "Megan Fox",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "dark brown/black",
     "category": "femme",
     "type": "both",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://dam.production.vlm.nmheagle.sk/api/image/640x426/01b/01bf6e5c-2747-4564-8887-e3431c6b5085.webp",
+    "resourceURL": "https://www.instagram.com/meganfox/"
   },
   {
     "name": "Megan Thee Stallion",
@@ -2975,11 +2965,11 @@ const faces = [
     "name": "Melissa Benoist",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "brown blonde",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://outloudculture.com/wp-content/uploads/2019/03/la-et-st-melissa-benoist-20171113.jpg",
+    "resourceURL": "https://www.instagram.com/melissabenoist/"
   },
   {
     "name": "Melissa Clarke",
@@ -3048,8 +3038,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://katebowler.com/wp-content/uploads/2023/04/Minka-Headshot-by-Melanie-Dunea-wpp1682622682577.jpeg.webp",
+    "resourceURL": "https://www.instagram.com/minkakelly/"
   },
   {
     "name": "Miranda Kerr",
@@ -3058,18 +3048,18 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://insiderdiva.com/wp-content/uploads/2018/08/MirandaHeroImage2017copy.jpg",
+    "resourceURL": "https://www.instagram.com/mirandakerr/"
   },
   {
     "name": "Miriam Leone",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "red",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://hips.hearstapps.com/hmg-prod/images/miriam-leone-attends-the-cocktail-at-fendi-couture-fall-news-photo-1630500424.jpg?crop=1xw:0.37518xh;center,top&resize=1200:*",
+    "resourceURL": "https://www.instagram.com/mirimeo/"
   },
   {
     "name": "Mishka Silva",
@@ -3085,11 +3075,11 @@ const faces = [
     "name": "Moran Atias",
     "age": 5,
     "ethnicity": "israeli white",
-    "hair": "brown",
+    "hair": "dark brown/black",
     "category": "femme",
     "type": "thot",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq1nkT7-r8sB2cKRT-G1FK4R6esQAISyLlYw&s",
+    "resourceURL": "https://www.listal.com/moran-atias/pictures/top-voted"
   },
   {
     "name": "Naomi Selvaggia De Crescenzo",
@@ -3205,11 +3195,11 @@ const faces = [
     "name": "Nina Dobrev",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "dark brown/black",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://i.pinimg.com/736x/80/36/95/803695384ffd836979f6094a7c6b6602.jpg",
+    "resourceURL": "https://www.instagram.com/nina/"
   },
   {
     "name": "Niykee Heaton",
@@ -3248,8 +3238,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://static.wikia.nocookie.net/walkertexasranger/images/e/ec/Odette.jpg/revision/latest?cb=20201222013457",
+    "resourceURL": "https://www.instagram.com/odetteannable/"
   },
   {
     "name": "Olivia Culpo",
@@ -3288,8 +3278,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://m.media-amazon.com/images/M/MV5BMjA2OTMyNTczMV5BMl5BanBnXkFtZTcwNDc5MzIzMw@@._V1_FMjpg_UX1000_.jpg",
+    "resourceURL": "https://www.instagram.com/oliviamunn/"
   },
   {
     "name": "Olivia Wilde",
@@ -3298,8 +3288,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://www.festival-deauville.com/wp-content/uploads/2022/08/capture-7.jpg",
+    "resourceURL": "https://www.instagram.com/oliviawilde/"
   },
   {
     "name": "Omari Hardwick",
@@ -3438,8 +3428,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://deadline.com/wp-content/uploads/2018/09/rachel-brosnahan-featured.jpg?w=630",
+    "resourceURL": "https://www.instagram.com/rachelbrosnahan/"
   },
   {
     "name": "Rachel Cook",
@@ -3545,11 +3535,11 @@ const faces = [
     "name": "Rosie Huntington-Whitely",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "blonde",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://img.goodfon.com/wallpaper/big/a/42/rosie-huntington-whiteley-rouzi-khantington-uaitli-blondin-2.webp",
+    "resourceURL": "https://www.listal.com/rosie-huntington--whiteley/pictures/top-voted"
   },
   {
     "name": "Ruby Rose",
@@ -3558,8 +3548,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://static.tvtropes.org/pmwiki/pub/images/ruby_rose.jpg",
+    "resourceURL": "https://www.instagram.com/rubyrose/"
   },
   {
     "name": "Ryan Reynolds",
@@ -3645,11 +3635,11 @@ const faces = [
     "name": "Scarlett Johansson",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "blonde",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://s.wsj.net/public/resources/images/BN-BY925_mag041_P_20140318165119.jpg",
+    "resourceURL": "https://www.listal.com/scarlett-johansson/pictures/top-voted"
   },
   {
     "name": "Scarlett Leithold",
@@ -3685,11 +3675,11 @@ const faces = [
     "name": "Shantel Vansanten",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "brown blonde",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://w0.peakpx.com/wallpaper/132/771/HD-wallpaper-shantel-vansanten-2018-shantel-vansanten-celebrities-girls-model.jpg",
+    "resourceURL": "https://www.instagram.com/therealshantel/"
   },
   {
     "name": "Shay Mitchell",
@@ -3708,8 +3698,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://static.tvtropes.org/pmwiki/pub/images/actor_shelley_hennig_148894_large.png",
+    "resourceURL": "https://www.instagram.com/shelleyhennig/"
   },
   {
     "name": "Skyler Samuels",
@@ -3748,8 +3738,8 @@ const faces = [
     "hair": "brown",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://cdn-epo.epic.leapevent.tech/thumbnails/2025/ATL25/727d2424-d894-456c-828f-b3390162c10e.jpg",
+    "resourceURL": "https://www.instagram.com/stellamaeve/"
   },
   {
     "name": "Stephen James",
@@ -3815,11 +3805,11 @@ const faces = [
     "name": "Talulah Riley",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "blonde",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://deadline.com/wp-content/uploads/2017/03/talulah-2.jpg?w=681&h=383&crop=1",
+    "resourceURL": "https://www.instagram.com/talulahrm/"
   },
   {
     "name": "Tanner Buchanan",
@@ -3978,7 +3968,7 @@ const faces = [
     "hair": "blonde",
     "category": "femme",
     "type": "both",
-    "imageURL": "http://cdn.wallpapersafari.com/54/56/ZSWEHy.jpg",
+    "imageURL": "https://cdn.wallpapersafari.com/54/56/ZSWEHy.jpg",
     "resourceURL": "https://www.instagram.com/officialtriciahelfer/"
   },
   {
@@ -4015,11 +4005,11 @@ const faces = [
     "name": "Vick Hope",
     "age": 4,
     "ethnicity": "black",
-    "hair": "brown",
+    "hair": "dark brown/black",
     "category": "femme",
     "type": "not",
-    "imageURL": "",
-    "resourceURL": ""
+    "imageURL": "https://spellmagazine.co.uk/wp-content/uploads/2023/02/DSC_0685.png",
+    "resourceURL": "https://www.instagram.com/vicknhope/"
   },
   {
     "name": "Weston Bouchér",
