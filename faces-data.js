@@ -2004,7 +2004,7 @@ const faces = [
     "name": "Jennifer Lawrence",
     "age": 4,
     "ethnicity": "white",
-    "hair": "brown",
+    "hair": "blonde",
     "category": "femme",
     "type": "not",
     "imageURL": "https://media.cnn.com/api/v1/images/stellar/prod/210909101836-01-jennifer-lawrence-file-2019.jpg?q=x_117,y_6,h_1564,w_2779,c_crop/h_833,w_1480",
