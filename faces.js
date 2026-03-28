@@ -80,7 +80,9 @@ if (safeFaces.length === 0) console.warn("faces is empty or not an array")
 const makeFaceCard = (face, index) => {
   if (!face || typeof face !== "object") return null
 
-  const name = normalize(face.name)
+  const name = normalize(face.name).replace(/\b\w+/g, w =>
+  w.toLowerCase()
+)
 
   const ageBucketNum = Number(face.age)
   const ageBucket = Number.isFinite(ageBucketNum) ? ageBucketNum : null
@@ -147,6 +149,8 @@ const makeFaceCard = (face, index) => {
 }
 
 const cards = safeFaces
+  .slice()
+  .sort((a, b) => normalize(a?.name).localeCompare(normalize(b?.name), undefined, { sensitivity: "base" }))
   .map(makeFaceCard)
   .filter((el) => el instanceof Element)
 
