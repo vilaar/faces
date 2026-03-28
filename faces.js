@@ -30,7 +30,10 @@ const hairToBuckets = (raw) => {
 
   for (const canonical of STATIC_HAIR_CATEGORIES) {
     const parts = canonical.split("/")
-    if (parts.some(part => normalized.includes(part))) {
+    if (parts.some(part => {
+      const pattern = new RegExp(`(?<![a-z])${part}(?![a-z])`, "i")
+      return pattern.test(normalized)
+    })) {
       found.add(canonical)
     }
   }
