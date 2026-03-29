@@ -403,7 +403,7 @@ const faces = [
   {
     "name": "Arjun Gupta",
     "age": 4,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "dark brown/black",
     "flag": "", "category": "masc",
     "type": "not",
@@ -1183,7 +1183,7 @@ const faces = [
   {
     "name": "Disha Patani",
     "age": 4,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "brown",
     "flag": "", "category": "femme",
     "type": "not",
@@ -1353,7 +1353,7 @@ const faces = [
   {
     "name": "Emilie Payet",
     "age": 2,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "dark brown/black",
     "flag": "", "category": "femme",
     "type": "thot",
@@ -1483,7 +1483,7 @@ const faces = [
   {
     "name": "Freida Pinto",
     "age": 4,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "brown",
     "flag": "", "category": "femme",
     "type": "not",
@@ -2403,7 +2403,7 @@ const faces = [
   {
     "name": "Kelly Gale",
     "age": 4,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "brown",
     "flag": "", "category": "femme",
     "type": "not",
@@ -2634,7 +2634,7 @@ const faces = [
   {
     "name": "Lisa Haydon",
     "age": 4,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "brown",
     "flag": "", "category": "femme",
     "type": "not",
@@ -3064,7 +3064,7 @@ const faces = [
   {
     "name": "Naomi Selvaggia De Crescenzo",
     "age": 3,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "brown",
     "flag": "", "category": "femme",
     "type": "thot",
@@ -3124,7 +3124,7 @@ const faces = [
   {
     "name": "Neelam Gill",
     "age": 1,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "brown",
     "flag": "", "category": "femme",
     "type": "thot",
@@ -3434,7 +3434,7 @@ const faces = [
   {
     "name": "Rania Benchegra",
     "age": 2,
-    "ethnicity": "indian",
+    "ethnicity": "indo-aryan",
     "hair": "brown",
     "flag": "", "category": "femme",
     "type": "thot",
@@ -4144,7 +4144,7 @@ const faces = [
 {
   "name": "raymond ablack",
   "age": 4,
-  "ethnicity": "indian",
+  "ethnicity": "indo-aryan",
   "hair": "dark brown/black",
   "flag": "", "category": "masc",
   "type": "not",
@@ -4164,7 +4164,7 @@ const faces = [
 {
   "name": "josh heuston",
   "age": 3,
-  "ethnicity": "indian biracial",
+  "ethnicity": "indo-aryan biracial",
   "hair": "brown",
   "flag": "", "category": "masc",
   "type": "not",
@@ -4204,7 +4204,7 @@ const faces = [
 {
   "name": "avan jogia",
   "age": 3,
-  "ethnicity": "indian biracial",
+  "ethnicity": "indo-aryan biracial",
   "hair": "dark brown/black",
   "flag": "", "category": "masc",
   "type": "not",
@@ -4994,7 +4994,7 @@ const faces = [
 {
   "name": "Avantika Vandanapu",
   "age": 1,
-  "ethnicity": "indian",
+  "ethnicity": "indo-aryan",
   "hair": "dark brown/black",
   "flag": "", "category": "femme",
   "type": "not",
@@ -5224,7 +5224,7 @@ const faces = [
 {
   "name": "Alanna Panday",
   "age": 2,
-  "ethnicity": "biracial indian",
+  "ethnicity": "biracial indo-aryan",
   "hair": "brown",
   "flag": "", "category": "femme",
   "type": "not",
@@ -5424,7 +5424,7 @@ const faces = [
 {
   "name": "simone ashley",
   "age": 3,
-  "ethnicity": "indian",
+  "ethnicity": "indo-aryan",
   "hair": "dark brown/black",
   "flag": "", "category": "femme",
   "type": "not",
@@ -5714,7 +5714,7 @@ const faces = [
 {
   "name": "rayna vallandingham",
   "age": 1,
-  "ethnicity": "indian",
+  "ethnicity": "indo-aryan",
   "hair": "dark brown/black",
   "flag": "", "category": "femme",
   "type": "not",
@@ -6194,7 +6194,7 @@ const faces = [
 {
   "name": "saira spooks",
   "age": 2,
-  "ethnicity": "indian",
+  "ethnicity": "indo-aryan",
   "hair": "dark brown/black",
   "flag": "alt tattoos", "category": "femme",
   "type": "thot",
