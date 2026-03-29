@@ -47,7 +47,7 @@ const hairToBuckets = (raw) => {
 // ---------- Static ethnicity categories (canonical display order) ----------
 const STATIC_ETHNICITY_CATEGORIES = [
   "aborigine", "arabic", "biracial", "black", "chinese", "filipino",
-  "indian", "indigenous na", "israeli", "japanese", "korean", "latinx", "white"
+  "indo-aryan", "indigenous na", "israeli", "japanese", "korean", "latinx", "white"
 ]
 
 const ETHNICITY_PART_OVERRIDES = {
