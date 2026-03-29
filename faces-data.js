@@ -901,16 +901,6 @@ const faces = [
     "resourceURL": "https://www.instagram.com/cindymello/"
   },
   {
-    "name": "Cintia Dicker",
-    "age": 3,
-    "ethnicity": "white",
-    "hair": "red",
-    "flag": "", "category": "femme",
-    "type": "thot",
-    "imageURL": "https://www.msxlabs.org/forum/attachments/42993-cintia-dicker-cintia-dicker.jpg",
-    "resourceURL": "https://www.instagram.com/cintiadicker/"
-  },
-  {
     "name": "Claudia Alende",
     "age": 2,
     "ethnicity": "white",
