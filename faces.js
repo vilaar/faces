@@ -84,8 +84,8 @@ const makeFaceCard = (face, index) => {
   if (!face || typeof face !== "object") return null
 
   const name = normalize(face.name).replace(/\b\w+/g, w =>
-  w.toLowerCase()
-)
+    w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+  )
 
   const ageBucketNum = Number(face.age)
   const ageBucket = Number.isFinite(ageBucketNum) ? ageBucketNum : null
@@ -275,11 +275,100 @@ const buildDevFilters = () => {
   }
 }
 
+// ---------- shared collapsible checkbox group builder ----------
+const buildCollapsibleCheckboxGroup = (mountId, key, items) => {
+  const mount = document.getElementById(mountId)
+  if (!mount) throw new Error(`Missing #${mountId} in DOM`)
+  mount.innerHTML = ""
+
+  let expanded = false
+
+  const getInputs = () => Array.from(mount.querySelectorAll("input[type='checkbox']"))
+
+  const refreshCollapse = () => {
+    const inputs = getInputs()
+    const anyChecked = inputs.some(i => i.checked)
+    let selectMoreEl = mount.querySelector(".select-more")
+
+    if (!anyChecked) {
+      expanded = false
+      for (const input of inputs) {
+        input.closest("label").style.display = ""
+      }
+      if (selectMoreEl) selectMoreEl.remove()
+      return
+    }
+
+    if (expanded) {
+      for (const input of inputs) {
+        input.closest("label").style.display = ""
+      }
+      if (!selectMoreEl) {
+        const link = document.createElement("span")
+        link.className = "select-more"
+        link.textContent = "Select more..."
+        link.addEventListener("click", () => {
+          expanded = !expanded
+          refreshCollapse()
+        })
+        mount.appendChild(link)
+      }
+    } else {
+      for (const input of inputs) {
+        input.closest("label").style.display = input.checked ? "" : "none"
+      }
+      if (!selectMoreEl) {
+        const link = document.createElement("span")
+        link.className = "select-more"
+        link.textContent = "Select more..."
+        link.addEventListener("click", () => {
+          expanded = true
+          refreshCollapse()
+        })
+        mount.appendChild(link)
+      }
+    }
+  }
+
+  for (const item of items) {
+    const value = typeof item === "object" ? item.value : String(item)
+    const displayLabel = typeof item === "object" ? item.label : String(item)
+
+    const label = document.createElement("label")
+    label.className = "filter-option"
+
+    const input = document.createElement("input")
+    input.type = "checkbox"
+    input.value = value
+
+    input.addEventListener("change", () => {
+      if (key === "ethnicity" && value === "__nonwhite__") {
+        filters.nonWhite = input.checked
+        filters.ethnicity.delete("__nonwhite__")
+      } else {
+        if (input.checked) filters[key].add(value)
+        else filters[key].delete(value)
+      }
+      expanded = false
+      refreshCollapse()
+      applyFilters()
+    })
+
+    const text = document.createElement("span")
+    text.textContent = displayLabel
+
+    label.append(input, text)
+    mount.appendChild(label)
+  }
+
+  mount._refreshCollapse = refreshCollapse
+}
+
 // ---------- count updates ----------
 const updateCounts = () => {
   const visibleCards = cards.filter(c => !c.classList.contains("is-hidden"))
 
-  // Type counts (always show)
+  // Type counts (always show all)
   for (const input of document.querySelectorAll("#filterType input[type='checkbox']")) {
     const val = input.value
     const count = visibleCards.filter(c =>
@@ -289,41 +378,65 @@ const updateCounts = () => {
     if (span) span.textContent = `${span.textContent.replace(/ \(\d+\)$/, "")} (${count})`
   }
 
-  // Age counts (always show)
+  // Age counts — show on all when none selected, only on checked when any selected
+  const anyAgeChecked = filters.age.size > 0
   for (const input of document.querySelectorAll("#filterAge input[type='checkbox']")) {
     const val = input.value
     const count = visibleCards.filter(c => c.dataset.age === val).length
     const span = input.closest("label")?.querySelector("span")
-    if (span) span.textContent = `${ageLabel(Number(val))} (${count})`
+    if (!span) continue
+    if (!anyAgeChecked || input.checked) {
+      span.textContent = `${ageLabel(Number(val))} (${count})`
+    } else {
+      span.textContent = ageLabel(Number(val))
+    }
   }
 
-  // Ethnicity counts (hide label if 0)
+  // Ethnicity counts — show on all when none selected, only on checked when any selected
+  const anyEthnicityActive = filters.ethnicity.size > 0 || filters.nonWhite
   for (const input of document.querySelectorAll("#filterEthnicity input[type='checkbox']")) {
-    if (input.id === "filterNonWhite") {
+    const label = input.closest("label")
+    const span = label?.querySelector("span")
+    if (!span) continue
+    if (input.value === "__nonwhite__") {
       const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").some(b => b !== "white")).length
-      const label = input.closest("label")
-      const span = label?.querySelector("span")
-      if (span) span.textContent = `Non-White (${count})`
-      if (label) label.style.display = count === 0 && !input.checked ? "none" : ""
+      if (!anyEthnicityActive || input.checked) {
+        span.textContent = `Non-White (${count})`
+      } else {
+        span.textContent = "Non-White"
+      }
       continue
     }
     const val = input.value
     const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").includes(val)).length
-    const label = input.closest("label")
-    const span = label?.querySelector("span")
-    if (span) span.textContent = `${val.replace(/\b\w/g, c => c.toUpperCase())} (${count})`
-    if (label) label.style.display = count === 0 && !input.checked ? "none" : ""
+    const display = val.replace(/\b\w/g, c => c.toUpperCase())
+    if (!anyEthnicityActive || input.checked) {
+      span.textContent = `${display} (${count})`
+    } else {
+      span.textContent = display
+    }
   }
 
-  // Hair counts (hide label if 0)
+  // Hair counts — show on all when none selected, only on checked when any selected
+  const anyHairChecked = filters.hair.size > 0
   for (const input of document.querySelectorAll("#filterHair input[type='checkbox']")) {
     const val = input.value
     const count = visibleCards.filter(c => c.dataset.hair.split("|").includes(val)).length
     const label = input.closest("label")
     const span = label?.querySelector("span")
-    if (span) span.textContent = `${val.replace(/\b\w/g, c => c.toUpperCase())} (${count})`
-    if (label) label.style.display = count === 0 && !input.checked ? "none" : ""
+    if (!span) continue
+    const display = val.replace(/\b\w/g, c => c.toUpperCase())
+    if (!anyHairChecked || input.checked) {
+      span.textContent = `${display} (${count})`
+    } else {
+      span.textContent = display
+    }
   }
+
+  // Refresh collapse state on all collapsible groups
+  document.querySelectorAll("[id^='filter']").forEach(mount => {
+    if (mount._refreshCollapse) mount._refreshCollapse()
+  })
 }
 
 // ---------- apply filters ----------
@@ -339,7 +452,6 @@ const applyFilters = () => {
       filters.category.size === 0 ||
       filters.category.has(card.dataset.category)
 
-    // Favorites only respect the category toggle
     if (isFavorite && okCategory) {
       card.classList.remove("is-hidden")
       card.dataset.pinned = "1"
@@ -385,7 +497,6 @@ const applyFilters = () => {
     noResultsEl.style.display = visibleCount === 0 ? "block" : "none"
   }
 
-  // Re-order DOM: favorites (sorted alpha) first, then the rest
   const pinned = cards
     .filter(c => c.dataset.pinned === "1")
     .sort((a, b) => a.dataset.name.localeCompare(b.dataset.name, undefined, { sensitivity: "base" }))
@@ -399,35 +510,6 @@ const applyFilters = () => {
 }
 
 // ---------- filter UI builders ----------
-const buildCheckboxGroup = (mountId, key, values, labelFn = (v) => String(v)) => {
-  const mount = document.getElementById(mountId)
-  if (!mount) throw new Error(`Missing #${mountId} in DOM`)
-  mount.innerHTML = ""
-
-  for (const v of values) {
-    const value = String(v)
-
-    const label = document.createElement("label")
-    label.className = "filter-option"
-
-    const input = document.createElement("input")
-    input.type = "checkbox"
-    input.value = value
-
-    input.addEventListener("change", () => {
-      if (input.checked) filters[key].add(value)
-      else filters[key].delete(value)
-      applyFilters()
-    })
-
-    const text = document.createElement("span")
-    text.textContent = labelFn(v)
-
-    label.append(input, text)
-    mount.appendChild(label)
-  }
-}
-
 // Type filter
 const buildTypeFilter = () => {
   const mount = document.getElementById("filterType")
@@ -476,6 +558,57 @@ const buildAgeFilter = () => {
       .filter(Number.isFinite)
   ).sort((a, b) => a - b)
 
+  let expanded = false
+
+  const getInputs = () => Array.from(mount.querySelectorAll("input[type='checkbox']"))
+
+  const refreshCollapse = () => {
+    const inputs = getInputs()
+    const anyChecked = inputs.some(i => i.checked)
+    let selectMoreEl = mount.querySelector(".select-more")
+
+    if (!anyChecked) {
+      expanded = false
+      for (const input of inputs) {
+        input.closest("label").style.display = ""
+      }
+      if (selectMoreEl) selectMoreEl.remove()
+      return
+    }
+
+    if (expanded) {
+      for (const input of inputs) {
+        input.closest("label").style.display = ""
+      }
+      if (!selectMoreEl) {
+        const link = document.createElement("span")
+        link.className = "select-more"
+        link.textContent = "Select more..."
+        link.addEventListener("click", () => {
+          expanded = !expanded
+          refreshCollapse()
+        })
+        mount.appendChild(link)
+      }
+    } else {
+      for (const input of inputs) {
+        input.closest("label").style.display = input.checked ? "" : "none"
+      }
+      if (!selectMoreEl) {
+        const link = document.createElement("span")
+        link.className = "select-more"
+        link.textContent = "Select more..."
+        link.addEventListener("click", () => {
+          expanded = true
+          refreshCollapse()
+        })
+        mount.appendChild(link)
+      }
+    }
+  }
+
+  mount._refreshCollapse = refreshCollapse
+
   for (const bucket of buckets) {
     const label = document.createElement("label")
     label.className = "filter-option"
@@ -486,6 +619,8 @@ const buildAgeFilter = () => {
     input.addEventListener("change", () => {
       if (input.checked) filters.age.add(input.value)
       else filters.age.delete(input.value)
+      expanded = false
+      refreshCollapse()
       applyFilters()
     })
 
@@ -499,10 +634,6 @@ const buildAgeFilter = () => {
 
 // Ethnicity filter
 const buildEthnicityFilter = () => {
-  const mount = document.getElementById("filterEthnicity")
-  if (!mount) throw new Error("Missing #filterEthnicity in DOM")
-  mount.innerHTML = ""
-
   const occupiedBuckets = new Set()
   for (const face of safeFaces) {
     for (const bucket of ethnicityToBuckets(normalize(face?.ethnicity))) {
@@ -510,52 +641,19 @@ const buildEthnicityFilter = () => {
     }
   }
 
-  for (const canonical of STATIC_ETHNICITY_CATEGORIES) {
-    if (!occupiedBuckets.has(canonical)) continue
-
-    const label = document.createElement("label")
-    label.className = "filter-option"
-
-    const input = document.createElement("input")
-    input.type = "checkbox"
-    input.value = canonical
-
-    input.addEventListener("change", () => {
-      if (input.checked) filters.ethnicity.add(canonical)
-      else filters.ethnicity.delete(canonical)
-      applyFilters()
-    })
-
-    const text = document.createElement("span")
-    text.textContent = canonical.replace(/\b\w/g, c => c.toUpperCase())
-
-    label.append(input, text)
-    mount.appendChild(label)
-  }
+  const items = STATIC_ETHNICITY_CATEGORIES
+    .filter(c => occupiedBuckets.has(c))
+    .map(c => ({ value: c, label: c.replace(/\b\w/g, x => x.toUpperCase()) }))
 
   if (occupiedBuckets.has("white")) {
-    const label = document.createElement("label")
-    label.className = "filter-option"
-    const input = document.createElement("input")
-    input.type = "checkbox"
-    input.id = "filterNonWhite"
-    input.addEventListener("change", () => {
-      filters.nonWhite = input.checked
-      applyFilters()
-    })
-    const text = document.createElement("span")
-    text.textContent = "Non-White"
-    label.append(input, text)
-    mount.appendChild(label)
+    items.push({ value: "__nonwhite__", label: "Non-White" })
   }
+
+  buildCollapsibleCheckboxGroup("filterEthnicity", "ethnicity", items)
 }
 
 // Hair filter
 const buildHairFilter = () => {
-  const mount = document.getElementById("filterHair")
-  if (!mount) throw new Error("Missing #filterHair in DOM")
-  mount.innerHTML = ""
-
   const occupiedBuckets = new Set()
   for (const face of safeFaces) {
     for (const bucket of hairToBuckets(normalize(face?.hair))) {
@@ -563,28 +661,11 @@ const buildHairFilter = () => {
     }
   }
 
-  for (const canonical of STATIC_HAIR_CATEGORIES) {
-    if (!occupiedBuckets.has(canonical)) continue
+  const items = STATIC_HAIR_CATEGORIES
+    .filter(c => occupiedBuckets.has(c))
+    .map(c => ({ value: c, label: c.replace(/\b\w/g, x => x.toUpperCase()) }))
 
-    const label = document.createElement("label")
-    label.className = "filter-option"
-
-    const input = document.createElement("input")
-    input.type = "checkbox"
-    input.value = canonical
-
-    input.addEventListener("change", () => {
-      if (input.checked) filters.hair.add(canonical)
-      else filters.hair.delete(canonical)
-      applyFilters()
-    })
-
-    const text = document.createElement("span")
-    text.textContent = canonical.replace(/\b\w/g, c => c.toUpperCase())
-
-    label.append(input, text)
-    mount.appendChild(label)
-  }
+  buildCollapsibleCheckboxGroup("filterHair", "hair", items)
 }
 
 const buildAllFilters = () => {
@@ -601,15 +682,20 @@ const syncCheckboxesToFilters = () => {
 
   document.querySelectorAll(".faces-sidebar input[type='checkbox']").forEach(cb => {
     if (cb.id === "categoryToggle") return
-    if (cb.id === "filterNonWhite") { cb.checked = filters.nonWhite; return }
     if (cb.id === "devFilterNoImage") { cb.checked = filters.noImage; return }
     if (cb.id === "devFilterNoRef") { cb.checked = filters.noRef; return }
+    if (cb.value === "__nonwhite__") { cb.checked = filters.nonWhite; return }
 
     const groupId = cb.closest("[id]")?.id ?? ""
     const key = groupId.replace("filter", "").toLowerCase()
     if (filters[key] instanceof Set) {
       cb.checked = filters[key].has(cb.value)
     }
+  })
+
+  // Trigger collapse refresh on all collapsible groups after sync
+  document.querySelectorAll("[id^='filter']").forEach(mount => {
+    if (mount._refreshCollapse) mount._refreshCollapse()
   })
 }
 
@@ -682,9 +768,6 @@ document.getElementById("clearFiltersBtn").addEventListener("click", () => {
   filters.noImage = false
   filters.noRef = false
 
-  const nonWhiteInput = document.getElementById("filterNonWhite")
-  if (nonWhiteInput) nonWhiteInput.checked = false
-
   const devNoImage = document.getElementById("devFilterNoImage")
   const devNoRef = document.getElementById("devFilterNoRef")
   if (devNoImage) devNoImage.checked = false
@@ -699,6 +782,10 @@ document.getElementById("clearFiltersBtn").addEventListener("click", () => {
       if (cb.id === "categoryToggle") return
       cb.checked = false
     })
+
+  // Rebuild collapsible groups to reset their internal expanded state
+  buildEthnicityFilter()
+  buildHairFilter()
 
   localStorage.removeItem("facesFilters")
   applyFilters()
