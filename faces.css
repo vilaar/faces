@@ -290,3 +290,17 @@ html {
   font-weight: normal;
   color: inherit;
 }
+
+.select-more {
+    display: block;
+    font-size: 0.8em;
+    opacity: 0.6;
+    cursor: pointer;
+    margin-top: 4px;
+    color: blue;
+    padding-left: 2px;
+}
+
+.select-more:hover {
+  opacity: 1;
+}
