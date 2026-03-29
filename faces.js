@@ -18,6 +18,7 @@ const normalize = (v) => (v == null ? "" : String(v).trim())
 const uniq = (arr) => Array.from(new Set(arr))
 const sortStrings = (a, b) =>
   String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: "base" })
+const splitPipe = (v) => (v ? v.split("|") : [])
 
 // ---------- Static hair categories (canonical display order) ----------
 const STATIC_HAIR_CATEGORIES = ["bald", "black", "blonde", "brown", "colored", "gray/white", "red"]
@@ -405,7 +406,7 @@ const updateCounts = () => {
     if (span) span.textContent = `${span.textContent.replace(/ \(\d+\)$/, "")} (${count})`
   }
 
-  // Age counts — show on all when none selected, only on checked when any selected
+  // Age counts
   const anyAgeChecked = filters.age.size > 0
   for (const input of document.querySelectorAll("#filterAge input[type='checkbox']")) {
     const val = input.value
@@ -419,28 +420,28 @@ const updateCounts = () => {
     }
   }
 
-  // Ethnicity counts — show on all when none selected, only on checked when any selected
+  // Ethnicity counts
   const anyEthnicityActive = filters.ethnicity.size > 0 || filters.nonWhite
   for (const input of document.querySelectorAll("#filterEthnicity input[type='checkbox']")) {
     const label = input.closest("label")
     const span = label?.querySelector("span")
     if (!span) continue
     if (input.value === "__nonwhite__") {
-      const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").some(b => b !== "white")).length
+      const count = visibleCards.filter(c => splitPipe(c.dataset.ethnicity).some(b => b !== "white")).length
       span.textContent = !anyEthnicityActive || input.checked ? `Non-White (${count})` : "Non-White"
       continue
     }
     const val = input.value
-    const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").includes(val)).length
+    const count = visibleCards.filter(c => splitPipe(c.dataset.ethnicity).includes(val)).length
     const display = val.replace(/\b\w/g, c => c.toUpperCase())
     span.textContent = !anyEthnicityActive || input.checked ? `${display} (${count})` : display
   }
 
-  // Hair counts — show on all when none selected, only on checked when any selected
+  // Hair counts
   const anyHairChecked = filters.hair.size > 0
   for (const input of document.querySelectorAll("#filterHair input[type='checkbox']")) {
     const val = input.value
-    const count = visibleCards.filter(c => c.dataset.hair.split("|").includes(val)).length
+    const count = visibleCards.filter(c => splitPipe(c.dataset.hair).includes(val)).length
     const label = input.closest("label")
     const span = label?.querySelector("span")
     if (!span) continue
@@ -448,11 +449,11 @@ const updateCounts = () => {
     span.textContent = !anyHairChecked || input.checked ? `${display} (${count})` : display
   }
 
-  // Flag counts — show on all when none selected, only on checked when any selected
+  // Flag counts
   const anyFlagChecked = filters.flag.size > 0
   for (const input of document.querySelectorAll("#filterFlag input[type='checkbox']")) {
     const val = input.value
-    const count = visibleCards.filter(c => c.dataset.flag.split("|").includes(val)).length
+    const count = visibleCards.filter(c => splitPipe(c.dataset.flag).includes(val)).length
     const label = input.closest("label")
     const span = label?.querySelector("span")
     if (!span) continue
@@ -497,7 +498,7 @@ const applyFilters = () => {
       filters.age.size === 0 ||
       filters.age.has(card.dataset.age)
 
-    const ethnicityBuckets = card.dataset.ethnicity.split("|")
+    const ethnicityBuckets = splitPipe(card.dataset.ethnicity)
 
     const okEthnicity =
       filters.ethnicity.size === 0 ||
@@ -509,11 +510,11 @@ const applyFilters = () => {
 
     const okHair =
       filters.hair.size === 0 ||
-      card.dataset.hair.split("|").some(b => filters.hair.has(b))
+      splitPipe(card.dataset.hair).some(b => filters.hair.has(b))
 
     const okFlag =
       filters.flag.size === 0 ||
-      card.dataset.flag.split("|").some(b => filters.flag.has(b))
+      splitPipe(card.dataset.flag).some(b => filters.flag.has(b))
 
     const okNoImage = !filters.noImage || card.dataset.hasImage === "0"
     const okNoRef = !filters.noRef || card.dataset.hasRef === "0"
