@@ -6196,7 +6196,7 @@ const faces = [
   "age": 2,
   "ethnicity": "arabic",
   "hair": "brown",
-  "flag": "", "category": "femme",
+  "flag": "swole", "category": "femme",
   "type": "thot",
   "imageURL": "https://www.famousbirthdays.com/faces/saffari-sara-image.jpg",
   "resourceURL": "https://www.instagram.com/sarasaffari__/"
