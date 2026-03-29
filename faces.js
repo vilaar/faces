@@ -71,6 +71,27 @@ const ethnicityToBuckets = (raw) => {
   return Array.from(found)
 }
 
+// ---------- Static flag categories ----------
+const STATIC_FLAG_CATEGORIES = ["alt", "tattoos", "swole"]
+
+const flagToBuckets = (raw) => {
+  const normalized = normalize(raw).toLowerCase()
+  if (!normalized) return []
+
+  const found = new Set()
+
+  for (const canonical of STATIC_FLAG_CATEGORIES) {
+    const pattern = new RegExp(`(?<![a-z])${canonical}(?![a-z])`, "i")
+    if (pattern.test(normalized)) {
+      found.add(canonical)
+    }
+  }
+
+  if (found.size === 0) found.add(normalized)
+
+  return Array.from(found)
+}
+
 // ---------- mount points ----------
 const facesContainer = document.getElementById("facesContainer")
 if (!facesContainer) throw new Error("Missing #facesContainer in DOM")
@@ -94,6 +115,8 @@ const makeFaceCard = (face, index) => {
   const ethnicityBuckets = ethnicityToBuckets(ethnicityRaw)
   const hairRaw = normalize(face.hair).toLowerCase()
   const hairBuckets = hairToBuckets(hairRaw)
+  const flagRaw = normalize(face.flag).toLowerCase()
+  const flagBuckets = flagToBuckets(flagRaw)
   const category = normalize(face.category).toLowerCase()
   const type = normalize(face.type).toLowerCase()
 
@@ -114,6 +137,7 @@ const makeFaceCard = (face, index) => {
   card.dataset.age = ageBucket == null ? "" : String(ageBucket)
   card.dataset.ethnicity = ethnicityBuckets.join("|")
   card.dataset.hair = hairBuckets.join("|")
+  card.dataset.flag = flagBuckets.join("|")
   card.dataset.category = category
   card.dataset.type = type
   card.dataset.hasImage = imageURL ? "1" : "0"
@@ -164,6 +188,7 @@ const filters = {
   age: new Set(),
   ethnicity: new Set(),
   hair: new Set(),
+  flag: new Set(),
   type: new Set(),
   category: new Set(),
   nonWhite: false,
@@ -205,6 +230,7 @@ const saveFilters = () => {
     age: Array.from(filters.age),
     ethnicity: Array.from(filters.ethnicity),
     hair: Array.from(filters.hair),
+    flag: Array.from(filters.flag),
     type: Array.from(filters.type),
     category: Array.from(filters.category),
     nonWhite: filters.nonWhite,
@@ -222,6 +248,7 @@ const loadFilters = () => {
     if (saved.age) saved.age.forEach(v => filters.age.add(v))
     if (saved.ethnicity) saved.ethnicity.forEach(v => filters.ethnicity.add(v))
     if (saved.hair) saved.hair.forEach(v => filters.hair.add(v))
+    if (saved.flag) saved.flag.forEach(v => filters.flag.add(v))
     if (saved.type) saved.type.forEach(v => filters.type.add(v))
     if (saved.category) saved.category.forEach(v => filters.category.add(v))
     filters.nonWhite = saved.nonWhite ?? false
@@ -400,21 +427,13 @@ const updateCounts = () => {
     if (!span) continue
     if (input.value === "__nonwhite__") {
       const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").some(b => b !== "white")).length
-      if (!anyEthnicityActive || input.checked) {
-        span.textContent = `Non-White (${count})`
-      } else {
-        span.textContent = "Non-White"
-      }
+      span.textContent = !anyEthnicityActive || input.checked ? `Non-White (${count})` : "Non-White"
       continue
     }
     const val = input.value
     const count = visibleCards.filter(c => c.dataset.ethnicity.split("|").includes(val)).length
     const display = val.replace(/\b\w/g, c => c.toUpperCase())
-    if (!anyEthnicityActive || input.checked) {
-      span.textContent = `${display} (${count})`
-    } else {
-      span.textContent = display
-    }
+    span.textContent = !anyEthnicityActive || input.checked ? `${display} (${count})` : display
   }
 
   // Hair counts — show on all when none selected, only on checked when any selected
@@ -426,11 +445,19 @@ const updateCounts = () => {
     const span = label?.querySelector("span")
     if (!span) continue
     const display = val.replace(/\b\w/g, c => c.toUpperCase())
-    if (!anyHairChecked || input.checked) {
-      span.textContent = `${display} (${count})`
-    } else {
-      span.textContent = display
-    }
+    span.textContent = !anyHairChecked || input.checked ? `${display} (${count})` : display
+  }
+
+  // Flag counts — show on all when none selected, only on checked when any selected
+  const anyFlagChecked = filters.flag.size > 0
+  for (const input of document.querySelectorAll("#filterFlag input[type='checkbox']")) {
+    const val = input.value
+    const count = visibleCards.filter(c => c.dataset.flag.split("|").includes(val)).length
+    const label = input.closest("label")
+    const span = label?.querySelector("span")
+    if (!span) continue
+    const display = val.replace(/\b\w/g, c => c.toUpperCase())
+    span.textContent = !anyFlagChecked || input.checked ? `${display} (${count})` : display
   }
 
   // Refresh collapse state on all collapsible groups
@@ -484,10 +511,14 @@ const applyFilters = () => {
       filters.hair.size === 0 ||
       card.dataset.hair.split("|").some(b => filters.hair.has(b))
 
+    const okFlag =
+      filters.flag.size === 0 ||
+      card.dataset.flag.split("|").some(b => filters.flag.has(b))
+
     const okNoImage = !filters.noImage || card.dataset.hasImage === "0"
     const okNoRef = !filters.noRef || card.dataset.hasRef === "0"
 
-    const visible = okType && okCategory && okAge && okEthnicity && okNonWhite && okHair && okNoImage && okNoRef
+    const visible = okType && okCategory && okAge && okEthnicity && okNonWhite && okHair && okFlag && okNoImage && okNoRef
 
     card.classList.toggle("is-hidden", !visible)
     if (visible) visibleCount++
@@ -510,7 +541,6 @@ const applyFilters = () => {
 }
 
 // ---------- filter UI builders ----------
-// Type filter
 const buildTypeFilter = () => {
   const mount = document.getElementById("filterType")
   if (!mount) throw new Error("Missing #filterType in DOM")
@@ -543,7 +573,6 @@ const buildTypeFilter = () => {
   }
 }
 
-// Age filter — only shows buckets that exist for the active category
 const buildAgeFilter = () => {
   const mount = document.getElementById("filterAge")
   if (!mount) throw new Error("Missing #filterAge in DOM")
@@ -632,7 +661,6 @@ const buildAgeFilter = () => {
   }
 }
 
-// Ethnicity filter
 const buildEthnicityFilter = () => {
   const occupiedBuckets = new Set()
   for (const face of safeFaces) {
@@ -652,7 +680,6 @@ const buildEthnicityFilter = () => {
   buildCollapsibleCheckboxGroup("filterEthnicity", "ethnicity", items)
 }
 
-// Hair filter
 const buildHairFilter = () => {
   const occupiedBuckets = new Set()
   for (const face of safeFaces) {
@@ -668,12 +695,28 @@ const buildHairFilter = () => {
   buildCollapsibleCheckboxGroup("filterHair", "hair", items)
 }
 
+const buildFlagFilter = () => {
+  const occupiedBuckets = new Set()
+  for (const face of safeFaces) {
+    for (const bucket of flagToBuckets(normalize(face?.flag))) {
+      occupiedBuckets.add(bucket)
+    }
+  }
+
+  const items = STATIC_FLAG_CATEGORIES
+    .filter(c => occupiedBuckets.has(c))
+    .map(c => ({ value: c, label: c.replace(/\b\w/g, x => x.toUpperCase()) }))
+
+  buildCollapsibleCheckboxGroup("filterFlag", "flag", items)
+}
+
 const buildAllFilters = () => {
   buildDevFilters()
   buildTypeFilter()
   buildAgeFilter()
   buildEthnicityFilter()
   buildHairFilter()
+  buildFlagFilter()
 }
 
 // ---------- sync checkboxes to restored filter state ----------
@@ -693,7 +736,6 @@ const syncCheckboxesToFilters = () => {
     }
   })
 
-  // Trigger collapse refresh on all collapsible groups after sync
   document.querySelectorAll("[id^='filter']").forEach(mount => {
     if (mount._refreshCollapse) mount._refreshCollapse()
   })
@@ -763,6 +805,7 @@ document.getElementById("clearFiltersBtn").addEventListener("click", () => {
   filters.age.clear()
   filters.ethnicity.clear()
   filters.hair.clear()
+  filters.flag.clear()
   filters.type.clear()
   filters.nonWhite = false
   filters.noImage = false
@@ -783,9 +826,9 @@ document.getElementById("clearFiltersBtn").addEventListener("click", () => {
       cb.checked = false
     })
 
-  // Rebuild collapsible groups to reset their internal expanded state
   buildEthnicityFilter()
   buildHairFilter()
+  buildFlagFilter()
 
   localStorage.removeItem("facesFilters")
   applyFilters()
