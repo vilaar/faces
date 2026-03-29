@@ -512,9 +512,7 @@ const applyFilters = () => {
       filters.hair.size === 0 ||
       splitPipe(card.dataset.hair).some(b => filters.hair.has(b))
 
-    const okFlag =
-      filters.flag.size === 0 ||
-      splitPipe(card.dataset.flag).some(b => filters.flag.has(b))
+    const okFlag = filters.flag.size === 0 || Array.from(filters.flag).every(b => splitPipe(card.dataset.flag).includes(b))
 
     const okNoImage = !filters.noImage || card.dataset.hasImage === "0"
     const okNoRef = !filters.noRef || card.dataset.hasRef === "0"
