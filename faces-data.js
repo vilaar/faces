@@ -3102,8 +3102,178 @@ const faces = [
     "resourceURL": "https://www.instagram.com/iamnataliemartinez/"
   },
   {
+  "name": "leeanna vamp",
+  "age": 4,
+  "ethnicity": "white",
+  "hair": "dark brown/black",
+  "category": "femme",
+  "type": "thot",
+  "imageURL": "https://pics.filmaffinity.com/113986623467891-nm_200.jpg",
+  "resourceURL": "https://www.instagram.com/LeeAnnaVamp/"
+},
+{
+  "name": "miranda raschell",
+  "age": 2,
+  "ethnicity": "latinx, indigenous na",
+  "hair": "dark brown/black",
+  "category": "femme",
+  "type": "thot",
+  "imageURL": "https://i.pinimg.com/736x/c0/b9/5d/c0b95de2179ef4257a8a073a48fa98d2.jpg",
+  "resourceURL": "https://www.instagram.com/ehcico"
+},
+{
+  "name": "leah halton",
+  "age": 2,
+  "ethnicity": "white",
+  "hair": "brown",
+  "category": "femme",
+  "type": "thot",
+  "imageURL": "https://i.pinimg.com/736x/e6/92/8a/e6928ab53d84a4db3323be8980986a2c.jpg",
+  "resourceURL": "https://www.instagram.com/leahhalton/"
+},
+{
+  "name": "cristy ren",
+  "age": 1,
+  "ethnicity": "white",
+  "hair": "brown",
+  "category": "femme",
+  "type": "thot",
+  "imageURL": "https://i.pinimg.com/736x/75/a8/5d/75a85d723340d3e80b0de689dd90a94b.jpg",
+  "resourceURL": "https://www.instagram.com/cristyren/"
+},
+{
+  "name": "monica bellucci",
+  "age": 9,
+  "ethnicity": "white",
+  "hair": "dark brown/black",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1N84l8.img?w=768&h=432&m=6&x=870&y=308&s=450&d=450",
+  "resourceURL": "https://www.instagram.com/monicabellucciofficiel/"
+},
+{
+  "name": "charlotte mckinney",
+  "age": 4,
+  "ethnicity": "white",
+  "hair": "blonde",
+  "category": "femme",
+  "type": "both",
+  "imageURL": "https://fortworth.blcomedy.com/img/comedians/thumbnail-image0-edff0bc7-main-image.jpg?1693254911",
+  "resourceURL": "https://www.instagram.com/charlottemckinney/"
+},
+{
+  "name": "jennifer connelly",
+  "age": 8,
+  "ethnicity": "white",
+  "hair": "brown",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://goldenglobes.com/wp-content/uploads/2023/10/jennifer_connelly_032414_noah_.jpg?w=600?w=600",
+  "resourceURL": "https://www.instagram.com/jennifer.connelly/"
+},
+{
+  "name": "laetitia casta",
+  "age": 6,
+  "ethnicity": "white",
+  "hair": "brown",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://booker-viva-ie.s3.amazonaws.com/library/1801/20230510_Pxq69EkIEXHq29_M.JPG",
+  "resourceURL": "https://www.listal.com/laetitia-casta/pictures/top-voted"
+},
+{
+  "name": "elsie hewitt",
+  "age": 2,
+  "ethnicity": "white",
+  "hair": "brown",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://cdn.i-scmp.com/sites/default/files/styles/700x400/public/d8/images/canvas/2024/08/07/d08f14a9-c7c0-4c94-b377-03f126d660d0_db4250f8.jpg?itok=jAKhIjxH&v=1723022938",
+  "resourceURL": "https://www.listal.com/elsie-hewitt/pictures/top-voted"
+},
+{
+  "name": "vika bronova",
+  "age": 3,
+  "ethnicity": "white",
+  "hair": "dark brown/black",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://assets.mycast.io/actor_images/actor-vika-bronova-128151_large.jpg",
+  "resourceURL": "https://www.listal.com/vika-bronova/pictures/top-voted"
+},
+{
+  "name": "vanessa fonseca",
+  "age": 4,
+  "ethnicity": "black",
+  "hair": "dark brown/black",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://live.staticflickr.com/8421/7803602968_a1db9c0dbb_w.jpg",
+  "resourceURL": "https://www.instagram.com/vanessablza/"
+},
+{
+  "name": "jennifer love hewitt",
+  "age": 6,
+  "ethnicity": "white",
+  "hair": "brown",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://s.yimg.com/ny/api/res/1.2/XECmT_MIjPMd41VLbTJcvg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM2MA--/https://media.zenfs.com/en/aol_prevention_182/14bd5cbf8bf09c833159e1c27bbf1176",
+  "resourceURL": "https://www.listal.com/jennifer-love-hewitt/pictures"
+},
+{
+  "name": "jemma highé (jemma hex)",
+  "age": 3,
+  "ethnicity": "white",
+  "hair": "black",
+  "category": "femme",
+  "type": "thot",
+  "imageURL": "https://images.squarespace-cdn.com/content/v1/681ae5109da1d346ca2833db/8283a192-ce91-4b79-ac93-a838451c7105/Jemma_Purple_Witch_NoSpiderWeb-%283+of+15%29.JPEG?format=500w",
+  "resourceURL": "https://www.jemmahex.com/"
+},
+{
+  "name": "rowan blanchard",
+  "age": 2,
+  "ethnicity": "biracial white arabic",
+  "hair": "brown",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://lifestories91.wordpress.com/wp-content/uploads/2015/08/rowan-blanchard.jpg",
+  "resourceURL": "https://www.instagram.com/rowanblanchard/"
+},
+{
+  "name": "bre tiesi",
+  "age": 4,
+  "ethnicity": "white",
+  "hair": "black",
+  "category": "femme",
+  "type": "both",
+  "imageURL": "https://www.hot97.com/wp-content/uploads/sites/2/2026/03/GettyImages-2266707688-e1773934319210.jpg",
+  "resourceURL": "https://www.instagram.com/bre_tiesi/"
+},
+{
+  "name": "snitchery",
+  "age": 3,
+  "ethnicity": "biracial black",
+  "hair": "brown colored",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://i.pinimg.com/736x/60/80/da/6080da309490a27cecdaf11f5bcf1e62.jpg",
+  "resourceURL": "https://www.instagram.com/snitchery/"
+},
+{
+  "name": "chloe veitch",
+  "age": 3,
+  "ethnicity": "white",
+  "hair": "brown",
+  "category": "femme",
+  "type": "not",
+  "imageURL": "https://cdn.sanity.io/images/0vv8moc6/newbeauty/a6ed71642b42b18b01306def924e37f33864b2be-750x500.jpg",
+  "resourceURL": "https://www.listal.com/chloe-veitch/pictures/top-voted"
+},
+  {
     "name": "Natalya Krasavina (Nata Lee)",
-    "age": 3,
+    "age": 2,
     "ethnicity": "white",
     "hair": "blonde",
     "flag": "", "category": "femme",
