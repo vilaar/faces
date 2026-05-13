@@ -55,7 +55,7 @@ const faces = [
     "ethnicity": "biracial chinese",
     "hair": "brown",
     "flag": "swole", "category": "femme",
-    "type": "both",
+    "type": "not",
     "imageURL": "https://pyxis.nymag.com/v1/imgs/73f/9e4/e0fdde75c856ad1b28fc76caf5e72ccc88-02-adrianne-ho.2x.rsocial.w600.jpg",
     "resourceURL": "https://www.instagram.com/adrianneho/"
   },
@@ -78,16 +78,6 @@ const faces = [
     "type": "not",
     "imageURL": "https://i.pinimg.com/236x/e0/ea/f7/e0eaf7ef8461c5fa47cb2eb1167d3858.jpg",
     "resourceURL": "https://www.listal.com/aiden-shaw/pictures"
-  },
-  {
-    "name": "Alan Ritchson",
-    "age": 5,
-    "ethnicity": "white",
-    "hair": "brown",
-    "flag": "", "category": "masc",
-    "type": "not",
-    "imageURL": "https://m.media-amazon.com/images/M/MV5BY2Q4NzYxYWMtOWNmZC00YzU4LTkyZmUtNmVjMTYxNzJjNTBiXkEyXkFqcGc@._V1_QL75_UY281_CR31,0,500,281_.jpg",
-    "resourceURL": "https://www.instagram.com/alanritchson/"
   },
   {
     "name": "Alejandra Guilmant",
@@ -2226,7 +2216,7 @@ const faces = [
     "ethnicity": "black",
     "hair": "dark brown/black",
     "flag": "", "category": "femme",
-    "type": "both",
+    "type": "not",
     "imageURL": "https://mn2s.com/wp-content/uploads/2021/06/KD-Aubert.png",
     "resourceURL": "https://www.instagram.com/therealkdaubert/"
   },
@@ -2256,7 +2246,7 @@ const faces = [
     "ethnicity": "black",
     "hair": "brown",
     "flag": "", "category": "femme",
-    "type": "thot",
+    "type": "not",
     "imageURL": "https://deadline.com/wp-content/uploads/2019/10/karrueche-tran-2.jpg?w=1000",
     "resourceURL": "https://www.listal.com/karrueche-tran/pictures"
   },
@@ -2296,7 +2286,7 @@ const faces = [
     "ethnicity": "white",
     "hair": "brown",
     "flag": "", "category": "femme",
-    "type": "thot",
+    "type": "not",
     "imageURL": "https://mn2s.com/wp-content/uploads/2024/11/Kate-Upton.png",
     "resourceURL": "https://www.instagram.com/kateupton/"
   },
@@ -2607,7 +2597,7 @@ const faces = [
     "ethnicity": "white",
     "hair": "blonde",
     "flag": "", "category": "femme",
-    "type": "thot",
+    "type": "not",
     "imageURL": "https://alchetron.com/cdn/lindsay-ellingson-add92ff1-eedd-4275-8702-b2baa271f88-resize-750.jpeg",
     "resourceURL": "https://www.instagram.com/lindsellingson/"
   },
@@ -2797,7 +2787,7 @@ const faces = [
     "ethnicity": "white",
     "hair": "blonde",
     "flag": "", "category": "femme",
-    "type": "both",
+    "type": "not",
     "imageURL": "https://m.media-amazon.com/images/M/MV5BNTljMTBkYWUtYTY4NC00MGIwLTk0Y2YtNDI1NWViOGNjOGM2XkEyXkFqcGc@._V1_.jpg",
     "resourceURL": "https://www.instagram.com/maggierawlins/"
   },
@@ -2837,7 +2827,7 @@ const faces = [
     "ethnicity": "white",
     "hair": "dirty blonde/light brown",
     "flag": "", "category": "femme",
-    "type": "thot",
+    "type": "not",
     "imageURL": "https://assets.mycast.io/actor_images/actor-marina-laswick-345598_large.jpg?1642198984",
     "resourceURL": "https://www.instagram.com/marooshk/"
   },
@@ -2857,7 +2847,7 @@ const faces = [
     "ethnicity": "latinx",
     "hair": "brown",
     "flag": "", "category": "femme",
-    "type": "both",
+    "type": "not",
     "imageURL": "https://heraldodemexico.com.mx/u/fotografias/m/2020/8/25/f1280x720-2161_133836_5050.jpg",
     "resourceURL": "https://www.instagram.com/marthahigareda/"
   },
@@ -5537,7 +5527,7 @@ const faces = [
   "ethnicity": "white",
   "hair": "blonde",
   "flag": "", "category": "femme",
-  "type": "thot",
+  "type": "not",
   "imageURL": "https://i.pinimg.com/736x/ca/4c/0b/ca4c0b9c9d36361486b8cfe6ff856bad.jpg",
   "resourceURL": "https://www.instagram.com/marissaggrace/"
 },
@@ -5587,7 +5577,7 @@ const faces = [
   "ethnicity": "white",
   "hair": "red",
   "flag": "", "category": "femme",
-  "type": "both",
+  "type": "not",
   "imageURL": "https://deadline.com/wp-content/uploads/2019/09/abigail-cowen-2.jpg?w=1000",
   "resourceURL": "https://www.instagram.com/abbeycowen/"
 },
@@ -5677,7 +5667,7 @@ const faces = [
   "ethnicity": "white",
   "hair": "brown",
   "flag": "swole", "category": "femme",
-  "type": "both",
+  "type": "not",
   "imageURL": "https://idposter.com/img/Bodybuilders/K/Krissy_Cela/id1280602.webp",
   "resourceURL": "https://www.instagram.com/krissycela/"
 },
@@ -5827,7 +5817,7 @@ const faces = [
   "ethnicity": "white",
   "hair": "brown",
   "flag": "", "category": "femme",
-  "type": "both",
+  "type": "not",
   "imageURL": "https://assets.mycast.io/characters/dafne-keen-7760459-normal.jpg?1672519098",
   "resourceURL": "https://www.instagram.com/dafnekeen/"
 },
@@ -5937,7 +5927,7 @@ const faces = [
   "ethnicity": "white",
   "hair": "blonde",
   "flag": "", "category": "femme",
-  "type": "both",
+  "type": "not",
   "imageURL": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaH-nluNfV4rI8QcJXlyp_-vh7jX7gQ-_6DOq9s1PTLlsK9ndjDpXav1UDG5i5Ekge2siaG08yUmTOnqDXWeQ4y07XuS_Mej6Rvfh4pJDa7rJDfxha21EBRn6zGcp76YgA9wlIM1SVvcxT/w1200-h630-p-k-no-nu/Milena+Ioanna.jpg",
   "resourceURL": "https://www.instagram.com/imilenaioanna/"
 },
@@ -6157,7 +6147,7 @@ const faces = [
   "ethnicity": "biracial black",
   "hair": "dark brown/black",
   "flag": "alt tattoos swole", "category": "femme",
-  "type": "thot",
+  "type": "not",
   "imageURL": "https://hollywoodlife.com/wp-content/uploads/2016/07/sasha-banks-bio-pic.jpg?fit=620%2C349",
   "resourceURL": "https://www.instagram.com/mercedesmone/"
 },
@@ -6167,7 +6157,7 @@ const faces = [
   "ethnicity": "latinx",
   "hair": "brown",
   "flag": "", "category": "femme",
-  "type": "thot",
+  "type": "not",
   "imageURL": "https://s.abcnews.com/images/GMA/BeckyGheadshot_1624540520851_hpMain_16x9_1600.jpg",
   "resourceURL": "https://www.instagram.com/iambeckyg/"
 },
@@ -6207,7 +6197,7 @@ const faces = [
   "ethnicity": "white",
   "hair": "brown",
   "flag": "", "category": "femme",
-  "type": "both",
+  "type": "not",
   "imageURL": "https://external-preview.redd.it/tate-mcrae-how-a-very-sensitive-very-introverted-singer-v0-R7BXLgWuy76vvqoNbG_qFENCdIdbAop0u4Ki75nrb3o.jpeg?width=1080&crop=smart&auto=webp&s=fc95d98f59e4ab34b89cfe5c6d2a2d26ba41554a",
   "resourceURL": "https://www.instagram.com/tatemcrae/"
 },
@@ -6297,7 +6287,7 @@ const faces = [
   "ethnicity": "white",
   "hair": "dark brown/black",
   "flag": "alt tattoos", "category": "femme",
-  "type": "both",
+  "type": "not",
   "imageURL": "https://i.pinimg.com/736x/11/03/12/11031289315c0d7e6855660538c23838.jpg",
   "resourceURL": "https://www.instagram.com/maggielindemann/"
 },
