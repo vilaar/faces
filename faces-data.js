@@ -456,7 +456,7 @@ const faces = [
     "ethnicity": "filipino",
     "hair": "dark brown/black",
     "flag": "alt tattoos", "category": "femme",
-    "type": "thot",
+    "type": "not",
     "imageURL": "https://brandmentions.com/wiki/images/e/e2/Bella_Poarch.jpg",
     "resourceURL": "https://www.instagram.com/bellapoarch/"
   },
@@ -2927,7 +2927,7 @@ const faces = [
     "ethnicity": "black",
     "hair": "dark brown/black",
     "flag": "", "category": "femme",
-    "type": "both",
+    "type": "not",
     "imageURL": "https://i1.sndcdn.com/artworks-PCzU5A17VrhcPHz0-4kzyjA-t500x500.jpg",
     "resourceURL": "https://www.instagram.com/theestallion/"
   },
