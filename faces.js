@@ -121,7 +121,10 @@ const makeFaceCard = (face, index) => {
   const category = normalize(face.category).toLowerCase()
   const type = normalize(face.type).toLowerCase()
 
-  const imageURL = normalize(face.imageURL)
+  const rawImageURL = normalize(face.imageURL)
+  const safeName = normalize(face.name).toLowerCase().replace(/[^a-z0-9]/g, "")
+  const imageURL = rawImageURL || `/face/${safeName}.png`
+  card.dataset.hasImage = rawImageURL ? "1" : "0"
   const resourceURL = normalize(face.resourceURL)
 
   const card = resourceURL ? document.createElement("a") : document.createElement("div")
