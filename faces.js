@@ -123,7 +123,7 @@ const makeFaceCard = (face, index) => {
 
   const rawImageURL = normalize(face.imageURL)
   const safeName = normalize(face.name).toLowerCase().replace(/[^a-z0-9]/g, "")
-  const imageURL = rawImageURL || `/face/${safeName}.png`
+  const imageURL = rawImageURL || `./face/${safeName}.png`
   const resourceURL = normalize(face.resourceURL)
   
   const card = resourceURL ? document.createElement("a") : document.createElement("div")
