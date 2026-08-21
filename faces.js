@@ -124,19 +124,18 @@ const makeFaceCard = (face, index) => {
   const rawImageURL = normalize(face.imageURL)
   const safeName = normalize(face.name).toLowerCase().replace(/[^a-z0-9]/g, "")
   const imageURL = rawImageURL || `/face/${safeName}.png`
-  card.dataset.hasImage = rawImageURL ? "1" : "0"
   const resourceURL = normalize(face.resourceURL)
-
+  
   const card = resourceURL ? document.createElement("a") : document.createElement("div")
   card.className = "face-card"
-
+  
   if (resourceURL) {
     card.href = resourceURL
     card.target = "_blank"
     card.rel = "noopener noreferrer"
     card.dataset.resourceURL = resourceURL
   }
-
+  
   card.dataset.name = name
   card.dataset.age = ageBucket == null ? "" : String(ageBucket)
   card.dataset.ethnicity = ethnicityBuckets.join("|")
@@ -144,7 +143,7 @@ const makeFaceCard = (face, index) => {
   card.dataset.flag = flagBuckets.join("|")
   card.dataset.category = category
   card.dataset.type = type
-  card.dataset.hasImage = imageURL ? "1" : "0"
+  card.dataset.hasImage = rawImageURL ? "1" : "0"
   card.dataset.hasRef = resourceURL ? "1" : "0"
   card.dataset.favorite = "0"
   card.dataset.pinned = "0"
