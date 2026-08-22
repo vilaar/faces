@@ -2011,7 +2011,7 @@ const faces = [
         "age": 2,
         "ethnicity": "chinese",
         "hair": "black",
-        "category": "femme",
+        "category": "masc",
         "type": "not",
         "imageURL": "",
         "resourceURL": "https://www.instagram.com/dallas_liu/"
