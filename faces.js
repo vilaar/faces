@@ -124,9 +124,6 @@ const makeFaceCard = (face, index) => {
   const rawImageURL = normalize(face.imageURL)
   const safeName = normalize(face.name).toLowerCase().replace(/[^a-z0-9]/g, "")
   const imageURL = `./face/${safeName}.png`
-  img.onerror = () => {
-    img.src = rawImageURL
-  }
   const resourceURL = normalize(face.resourceURL)
   
   const card = resourceURL ? document.createElement("a") : document.createElement("div")
@@ -157,6 +154,9 @@ const makeFaceCard = (face, index) => {
   img.alt = name
   img.loading = "lazy"
   img.decoding = "async"
+  img.onerror = () => {
+    img.src = rawImageURL
+  }
 
   const nameEl = document.createElement("div")
   nameEl.className = "name"
