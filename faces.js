@@ -155,7 +155,10 @@ const makeFaceCard = (face, index) => {
   img.loading = "lazy"
   img.decoding = "async"
   img.onerror = () => {
-    img.src = rawImageURL
+    if (rawImageURL) {
+      img.onerror = null
+      img.src = rawImageURL
+    }
   }
 
   const nameEl = document.createElement("div")
