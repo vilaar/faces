@@ -105,9 +105,9 @@ if (safeFaces.length === 0) console.warn("faces is empty or not an array")
 const makeFaceCard = (face, index) => {
   if (!face || typeof face !== "object") return null
 
-  const name = normalize(face.name)
+const name = normalize(face.name)
   .toLowerCase()
-  .replace(/(^|[\s\-'(])(\S)/g, (_, sep, char) => sep + char.toUpperCase())
+  .replace(/(^|[\s\-'(.])(\S)/g, (_, sep, char) => sep + char.toUpperCase())
   .replace(/(?<=[\s(])(Mc|Mac)([a-z])/g, (_, prefix, char) => prefix + char.toUpperCase())
 
   const ageBucketNum = Number(face.age)
