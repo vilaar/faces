@@ -2651,7 +2651,7 @@ const faces = [
         "category": "femme",
         "type": "thot",
         "imageURL": "https://i.pinimg.com/736x/c7/be/80/c7be8076d1a8a4c34ac8d7c2b614c1c1.jpg",
-        "resourceURL": "https://www.instagram.com/killer_katrin/"
+        "resourceURL": "https://www.listal.com/ekaterina-novikova/pictures/top-voted"
     },
     {
         "name": "eli goree",
@@ -4886,7 +4886,7 @@ const faces = [
         "category": "femme",
         "type": "thot",
         "imageURL": "https://image.tmdb.org/t/p/original/AcxAU7FsR04fuuemcWoIoo5M57E.jpg",
-        "resourceURL": "https://www.instagram.com/keepchambers/"
+        "resourceURL": "https://www.listal.com/keep-chambers/pictures"
     },
     {
         "name": "Keilah Kang",
@@ -5291,7 +5291,7 @@ const faces = [
         "category": "femme",
         "type": "thot",
         "imageURL": "https://pics.filmaffinity.com/113986623467891-nm_200.jpg",
-        "resourceURL": "https://www.instagram.com/LeeAnnaVamp/"
+        "resourceURL": "https://www.listal.com/leeanna-vamp/pictures/top-voted"
     },
     {
         "name": "leni klum",
@@ -5476,7 +5476,7 @@ const faces = [
         "category": "femme",
         "type": "not",
         "imageURL": "",
-        "resourceURL": "https://www.instagram.com/londybobs/",
+        "resourceURL": "https://www.listal.com/london-thor/pictures/top-voted",
         "flag": ""
     },
     {
@@ -6509,7 +6509,7 @@ const faces = [
         "category": "femme",
         "type": "thot",
         "imageURL": "https://w0.peakpx.com/wallpaper/851/151/HD-wallpaper-natalya-krasavina-nata-lee-woman-natalya-krasavina-models-nata-lee-blonde.jpg",
-        "resourceURL": "https://www.instagram.com/natalee.007/"
+        "resourceURL": "https://www.instagram.com/007natalee/"
     },
     {
         "name": "natasha liu bordizzo",
