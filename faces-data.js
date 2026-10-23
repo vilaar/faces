@@ -7337,7 +7337,7 @@ const faces = [
         "resourceURL": "https://www.instagram.com/robraco/"
     },
     {
-        "name": "rolyat",
+        "name": "taylor bloxam (rolyat)",
         "age": 3,
         "ethnicity": "white",
         "hair": "colored",
