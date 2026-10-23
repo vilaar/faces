@@ -108,6 +108,7 @@ const makeFaceCard = (face, index) => {
   const name = normalize(face.name)
   .toLowerCase()
   .replace(/(^|[\s\-'(])(\S)/g, (_, sep, char) => sep + char.toUpperCase())
+  .replace(/(?<=[\s(])(Mc|Mac)([a-z])/g, (_, prefix, char) => prefix + char.toUpperCase())
 
   const ageBucketNum = Number(face.age)
   const ageBucket = Number.isFinite(ageBucketNum) ? ageBucketNum : null
