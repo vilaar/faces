@@ -132,6 +132,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/adriannepalicki/"
     },
     {
+      "name": "agnez mo",
+      "age": 5,
+      "ethnicity": "indonesian",
+      "hair": "brown black",
+      "flag": "busty",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/agnezmo/"
+    },
+    {
         "name": "aidan gallagher",
         "age": 1,
         "ethnicity": "white",
@@ -1285,6 +1296,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/bridgetsatterlee/"
     },
     {
+      "name": "brighton sharbino",
+      "age": 1,
+      "ethnicity": "white",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/brightonmaia/?hl=en"
+    },
+    {
         "name": "Brock O'Hurn",
         "age": 4,
         "ethnicity": "white",
@@ -1305,6 +1327,17 @@ const faces = [
         "type": "not",
         "imageURL": "https://i.pinimg.com/736x/53/20/03/5320036609af327a104e8d5d009fd892.jpg",
         "resourceURL": "https://www.instagram.com/broderickhunter/"
+    },
+    {
+      "name": "brooks nader",
+      "age": 3,
+      "ethnicity": "white",
+      "hair": "blonde",
+      "flag": "busty",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/brooksnader/"
     },
     {
         "name": "Bruno Santos",
@@ -1338,6 +1371,17 @@ const faces = [
         "type": "not",
         "imageURL": "https://i0.wp.com/tvtonight.com.au/wp-content/uploads/2013-03-08_1556.jpg?ssl=1",
         "resourceURL": "https://www.instagram.com/caitlinstasey/"
+    },
+    {
+      "name": "callina liang",
+      "age": 2,
+      "ethnicity": "chinese",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/callina.liang/"
     },
     {
         "name": "callum turner",
@@ -1964,6 +2008,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/cristinavox/"
     },
     {
+      "name": "cristin milioti",
+      "age": 5,
+      "ethnicity": "white",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/cristinmilioti/"
+    },
+    {
         "name": "cristy ren",
         "age": 1,
         "ethnicity": "white",
@@ -2069,6 +2124,17 @@ const faces = [
         "imageURL": "",
         "resourceURL": "https://www.instagram.com/danmacpherson/",
         "flag": ""
+    },
+    {
+      "name": "daniela avanzini",
+      "age": 2,
+      "ethnicity": "white",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/daniela_avanzini/"
     },
     {
         "name": "daniela melchior",
@@ -2498,6 +2564,17 @@ const faces = [
         "type": "thot",
         "imageURL": "https://i.pinimg.com/736x/51/66/51/516651fb34d8a807f0a70775e828698e.jpg",
         "resourceURL": "https://www.instagram.com/_darnit_domi"
+    },
+    {
+      "name": "dominique elwes",
+      "age": 1,
+      "ethnicity": "white",
+      "hair": "blonde",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/dominiqueelwes/"
     },
     {
         "name": "donald glover",
@@ -3651,6 +3728,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/hollandroden/"
     },
     {
+      "name": "holly madison",
+      "age": 6,
+      "ethnicity": "white",
+      "hair": "blonde",
+      "flag": "",
+      "category": "femme",
+      "type": "thot",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/hollymadison/"
+    },
+    {
         "name": "Hugh Jackman",
         "age": 8,
         "ethnicity": "white",
@@ -3677,7 +3765,7 @@ const faces = [
         "age": 2,
         "ethnicity": "white",
         "hair": "blonde",
-        "flag": "",
+        "flag": "trans",
         "category": "femme",
         "type": "not",
         "imageURL": "https://image.tmdb.org/t/p/w500/6ZDieLlbm2m3jbYaxsHFo7cWWzJ.jpg",
@@ -3717,6 +3805,17 @@ const faces = [
         "resourceURL": ""
     },
     {
+      "name": "inde navarette",
+      "age": 2,
+      "ethnicity": "biracial white latinx",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/indenavarrette/"
+    },
+    {
         "name": "India Eisley",
         "age": 1,
         "ethnicity": "white",
@@ -3743,7 +3842,7 @@ const faces = [
         "age": 3,
         "ethnicity": "biracial black latinx",
         "hair": "dark brown/black",
-        "flag": "",
+        "flag": "trans",
         "category": "femme",
         "type": "not",
         "imageURL": "https://www.chill.us/sites/default/files/2018/10/17/indyamoore-750x.jpg",
@@ -4560,6 +4659,17 @@ const faces = [
         "resourceURL": ""
     },
     {
+      "name": "josie totah",
+      "age": 2,
+      "ethnicity": "white",
+      "hair": "brown",
+      "flag": "trans",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/josietotah/"
+    },
+    {
         "name": "journey montana",
         "age": 2,
         "ethnicity": "black",
@@ -4623,6 +4733,17 @@ const faces = [
         "type": "not",
         "imageURL": "https://images.fashionmodeldirectory.com/images/models/14834/juliana-herz-426102-fit.jpg",
         "resourceURL": "https://www.instagram.com/julianaherz/"
+    },
+    {
+      "name": "justice reality",
+      "age": 1,
+      "ethnicity": "biracial black",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/justicereality_"
     },
     {
         "name": "K.D. Aubert",
@@ -4876,6 +4997,17 @@ const faces = [
         "type": "not",
         "imageURL": "https://www.thelist.com/img/gallery/what-we-know-about-hallmarks-kayla-wallace/intro-1659937396.jpg",
         "resourceURL": "https://www.instagram.com/imkaylawallace/"
+    },
+    {
+      "name": "kay marie (ohkaybunny)",
+      "age": 3,
+      "ethnicity": "white",
+      "hair": "brown",
+      "flag": "alt",
+      "category": "femme",
+      "type": "thot",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/ohkaybunny"
     },
     {
         "name": "keep chambers",
@@ -5143,6 +5275,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/kyliebunbury/"
     },
     {
+      "name": "lada lyumos",
+      "age": 3,
+      "ethnicity": "white",
+      "hair": "colored blonde red brown",
+      "flag": "busty",
+      "category": "femme",
+      "type": "thot",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/ladalyumos/"
+    },
+    {
         "name": "laetitia casta",
         "age": 6,
         "ethnicity": "white",
@@ -5173,6 +5316,17 @@ const faces = [
         "type": "not",
         "imageURL": "https://www.thelist.com/img/gallery/the-stunning-style-transformation-of-lisa-from-blackpink/intro-1740091346.jpg",
         "resourceURL": "https://www.instagram.com/lalalalisa_m/"
+    },
+    {
+      "name": "lara raj",
+      "age": 1,
+      "ethnicity": "indo-aryan",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/lararaj/"
     },
     {
         "name": "laura birn",
@@ -5436,6 +5590,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/lisahaydon/"
     },
     {
+      "name": "liv morgan",
+      "age": 4,
+      "ethnicity": "white",
+      "hair": "blonde",
+      "flag": "alt",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/yaonlylivvonce/"
+    },
+    {
         "name": "lizze broadway",
         "age": 2,
         "ethnicity": "white",
@@ -5467,6 +5632,17 @@ const faces = [
         "type": "not",
         "imageURL": "https://www.womenshistory.org/sites/default/files/styles/embedded_alt_1/public/images/2020-01/Logan%20Browning%20Heatshot%20Square.jpg?itok=Fw4mAEcT",
         "resourceURL": "https://www.instagram.com/loganlaurice/"
+    },
+    {
+      "name": "lola goth",
+      "age": 1,
+      "ethnicity": "white",
+      "hair": "brown black",
+      "flag": "alt busty",
+      "category": "femme",
+      "type": "thot",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/lolaxyummy/"
     },
     {
         "name": "london thor",
@@ -5502,6 +5678,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/louiscancelmi/"
     },
     {
+      "name": "louis partridge",
+      "age": 2,
+      "ethnicity": "white",
+      "hair": "brown",
+      "flag": "",
+      "category": "masc",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/louispartridge_/"
+    },
+    {
         "name": "Louise Cliffe",
         "age": 5,
         "ethnicity": "white",
@@ -5511,6 +5698,17 @@ const faces = [
         "type": "thot",
         "imageURL": "http://img.skysports.com/09/01/218x298/soccerettewk212800_1719564.jpg",
         "resourceURL": "https://www.instagram.com/louisecliffereal/"
+    },
+    {
+      "name": "lourdes leon",
+      "age": 3,
+      "ethnicity": "white",
+      "hair": "brown black",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/lourdesleon/"
     },
     {
         "name": "lucas till",
@@ -5722,6 +5920,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/madisonbeer/"
     },
     {
+      "name": "madison lintz",
+      "age": 2,
+      "ethnicity": "white",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/madisonlintz/"
+    },
+    {
         "name": "Madison Pettis",
         "age": 1,
         "ethnicity": "biracial black",
@@ -5819,6 +6028,17 @@ const faces = [
         "type": "not",
         "imageURL": "https://assets.mycast.io/actor_images/actor-manny-montana-114157_large.jpg?1595791080",
         "resourceURL": "https://www.instagram.com/lbmannymontana/"
+    },
+    {
+      "name": "manon bannerman",
+      "age": 1,
+      "ethnicity": "biracial black",
+      "hair": "brown black",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/meretmanon/"
     },
     {
         "name": "margaret qualley",
@@ -5951,6 +6171,17 @@ const faces = [
         "type": "thot",
         "imageURL": "https://www.voici.fr/imgre/fit/~1~voi~2021~06~07~07f595fd-c4bf-4005-9c0f-3ab3fa329722.png/1200x900/focusPoint/602%2C301/photos-mathilde-tantot-simplement-vetue-d-un-jean-elle-fait-fondre-sa-communaute.jpg",
         "resourceURL": "https://www.instagram.com/mathildtantot/"
+    },
+    {
+      "name": "matilda de angelis",
+      "age": 3,
+      "ethnicity": "white",
+      "hair": "brown red",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/matildadeangelis/"
     },
     {
         "name": "matteo martari",
@@ -6107,6 +6338,28 @@ const faces = [
         "resourceURL": "https://www.instagram.com/miaxgoth/"
     },
     {
+      "name": "mia khalifa",
+      "age": 4,
+      "ethnicity": "arabic",
+      "hair": "brown",
+      "flag": "busty",
+      "category": "femme",
+      "type": "thot",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/miakhalifa/"
+    },
+    {
+      "name": "mia sorety",
+      "age": 3,
+      "ethnicity": "latinx",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "thot",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/miasorety/"
+    },
+    {
         "name": "Michael B. Jordan",
         "age": 4,
         "ethnicity": "black",
@@ -6215,6 +6468,17 @@ const faces = [
         "type": "not",
         "imageURL": "https://image.tmdb.org/t/p/original/vH7XYI6cw6PFRDflOJY8iQEEg7g.jpg",
         "resourceURL": "https://www.instagram.com/mikaela/"
+    },
+    {
+      "name": "mikaela lafuente",
+      "age": 2,
+      "ethnicity": "latinx",
+      "hair": "brown",
+      "flag": "",
+      "category": "femme",
+      "type": "thot",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/mikalafuente"
     },
     {
         "name": "mikayla demaiter",
@@ -6886,6 +7150,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/theparisberelc/"
     },
     {
+      "name": "paris hilton",
+      "age": 6,
+      "ethnicity": "white",
+      "hair": "blonde",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/parishilton/"
+    },
+    {
         "name": "patrick gibson",
         "age": 2,
         "ethnicity": "white",
@@ -6906,6 +7181,17 @@ const faces = [
         "imageURL": "",
         "resourceURL": "https://www.instagram.com/patrickschwarzenegger/",
         "flag": ""
+    },
+    {
+      "name": "paul anthony kelly",
+      "age": 4,
+      "ethnicity": "white",
+      "hair": "brown",
+      "flag": "",
+      "category": "masc",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/ofishalpak/"
     },
     {
         "name": "Paul Rudd",
@@ -7644,6 +7930,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/saweetie/"
     },
     {
+      "name": "saxon sharbino",
+      "age": 2,
+      "ethnicity": "white",
+      "hair": "blonde",
+      "flag": "",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/saxon/?hl=en"
+    },
+    {
         "name": "Sayo",
         "age": 3,
         "ethnicity": "black",
@@ -7973,6 +8270,17 @@ const faces = [
         "resourceURL": "https://www.instagram.com/stormimaya/"
     },
     {
+      "name": "summer dirx",
+      "age": 1,
+      "ethnicity": "white",
+      "hair": "blonde",
+      "flag": "trans",
+      "category": "femme",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/summerdirx/"
+    },
+    {
         "name": "sumner stroh",
         "age": 2,
         "ethnicity": "white",
@@ -8114,6 +8422,17 @@ const faces = [
         "type": "both",
         "imageURL": "https://image.hurimg.com/i/hurriyet/90/0x0/5d78fa1745d2a023a0d62489.jpg",
         "resourceURL": "https://www.instagram.com/taylormomsen/"
+    },
+    {
+      "name": "taylor zakhar perez",
+      "age": 4,
+      "ethnicity": "biracial arabic",
+      "hair": "brown",
+      "flag": "",
+      "category": "masc",
+      "type": "not",
+      "imageURL": "",
+      "resourceURL": "https://www.instagram.com/taylorzakharperez/"
     },
     {
         "name": "Theo James",
