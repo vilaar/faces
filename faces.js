@@ -20,6 +20,14 @@ const sortStrings = (a, b) =>
   String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: "base" })
 const splitPipe = (v) => (v ? v.split("|") : [])
 
+// Flag bucket helper
+
+const flagToBuckets = (raw) => {
+  const normalized = normalize(raw).toLowerCase()
+  if (!normalized) return []
+  return normalized.split(/[\s,]+/).filter(Boolean)
+}
+
 // ---------- Static hair categories (canonical display order) ----------
 const STATIC_HAIR_CATEGORIES = ["bald", "black", "blonde", "brown", "colored", "gray/white", "red"]
 
@@ -63,27 +71,6 @@ const ethnicityToBuckets = (raw) => {
   for (const canonical of STATIC_ETHNICITY_CATEGORIES) {
     const parts = ETHNICITY_PART_OVERRIDES[canonical] ?? canonical.split("/")
     if (parts.some(part => normalized.includes(part))) {
-      found.add(canonical)
-    }
-  }
-
-  if (found.size === 0) found.add(normalized)
-
-  return Array.from(found)
-}
-
-// ---------- Static flag categories ----------
-const STATIC_FLAG_CATEGORIES = ["alt", "tattoos", "swole"]
-
-const flagToBuckets = (raw) => {
-  const normalized = normalize(raw).toLowerCase()
-  if (!normalized) return []
-
-  const found = new Set()
-
-  for (const canonical of STATIC_FLAG_CATEGORIES) {
-    const pattern = new RegExp(`(?<![a-z])${canonical}(?![a-z])`, "i")
-    if (pattern.test(normalized)) {
       found.add(canonical)
     }
   }
@@ -711,8 +698,8 @@ const buildFlagFilter = () => {
     }
   }
 
-  const items = STATIC_FLAG_CATEGORIES
-    .filter(c => occupiedBuckets.has(c))
+  const items = [...occupiedBuckets]
+    .sort()
     .map(c => ({ value: c, label: c.replace(/\b\w/g, x => x.toUpperCase()) }))
 
   buildCollapsibleCheckboxGroup("filterFlag", "flag", items)
