@@ -3805,7 +3805,7 @@ const faces = [
         "resourceURL": ""
     },
     {
-      "name": "inde navarette",
+      "name": "inde navarrette",
       "age": 2,
       "ethnicity": "biracial white latinx",
       "hair": "brown",
